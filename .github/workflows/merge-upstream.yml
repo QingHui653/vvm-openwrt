@@ -15,6 +15,18 @@ on:
   schedule:
     - cron: 30 19 * * *
 
+env:
+  # REPO_URL: https://github.com/Lienol/openwrt
+  # REPO_BRANCH: dev-19.07
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
+  CONFIG_FILE: .config
+  DIY_SH: diy.sh
+  SSH_ACTIONS: true
+  UPLOAD_BIN_DIR: false
+  UPLOAD_FIRMWARE: true
+  TZ: Asia/Shanghai
+
 jobs:
   merge:
 
@@ -29,15 +41,5 @@ jobs:
         fetch-depth: 0
         lfs: true
 
-    - name: Set git identity
-      run : |
-        git config --global user.email "KFER.Mercer@gmail.com"
-        git config --global user.name "KFERMercer"
-
-    - name: Load upstream commits
-      run: git pull https://github.com/coolsnowwolf/lede.git --no-edit --strategy-option ours
-
-    - name: Push Commits
-      env:
-        DOWNSTREAM_BRANCH: master
-      run: git push origin $DOWNSTREAM_BRANCH
+    - name: Clone source code
+      run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
