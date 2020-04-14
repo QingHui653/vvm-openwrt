@@ -67,9 +67,8 @@ jobs:
     - name: Load Soft Config
       run: |
         ls -l
-        cd ..
         chmod +x $SOFT_SH
-        ../$SOFT_SH
+        ./$SOFT_SH
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
