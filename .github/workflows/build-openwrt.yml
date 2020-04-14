@@ -27,6 +27,7 @@ env:
   # REPO_URL: https://github.com/coolsnowwolf/lede
   # REPO_BRANCH: master
   CONFIG_FILE: .config
+  SOFT_SH: soft.sh
   DIY_SH: diy.sh
   CONFIG_SH: config.sh
   SSH_ACTIONS: true
@@ -58,13 +59,26 @@ jobs:
     - name: Clone source code
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
+    # 界面化配置,等待SSH连接 
+    - name: SSH connection to Actions
+      uses: P3TERX/debugger-action@master
+      if: env.SSH_ACTIONS == 'true'
+
+    - name: Load Soft Config
+      run: |
+        [ -e files ] && mv files openwrt/files
+        [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        chmod +x $SOFT_SH
+        cd openwrt
+        ../$SOFT_SH
+
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
 
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: Load custom configuration
+    - name: Load DIY Config
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
@@ -72,9 +86,8 @@ jobs:
         cd openwrt
         ../$DIY_SH
 
-    - name: config 
+    - name: Load Customer Config
       run: |
-        echo "开始自定义配置"
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $CONFIG_SH

@@ -1,3 +1,4 @@
+echo "开始 config 配置"
 rm -f ./.config*
 touch ./.config
 
