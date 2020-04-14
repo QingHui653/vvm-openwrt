@@ -66,8 +66,8 @@ jobs:
 
     - name: Load Soft Config
       run: |
-        pwd
-        ll
+        ls -l
+        cd ..
         chmod +x $SOFT_SH
         ../$SOFT_SH
 
