@@ -10,5 +10,5 @@
 
 # 自定义软件
 cd openwrt/package/libs 
-git clone https://github.com/Lienol/openwrt-package/blob/master/lienol/luci-app-passwall
-git clone https://github.com/Lienol/openwrt/blob/dev-19.07/package/diy/frp/
+# git clone https://github.com/Lienol/openwrt-package/blob/master/lienol/luci-app-passwall
+# git clone https://github.com/Lienol/openwrt/blob/dev-19.07/package/diy/frp/
