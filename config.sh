@@ -1,4 +1,9 @@
 echo "开始 config 配置"
+#此为必须,进入openwrt目录
+ls -l
+cd openwrt
+ls -l
+
 rm -f ./.config*
 touch ./.config
 
