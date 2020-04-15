@@ -86,9 +86,9 @@ jobs:
 
     - name: Load Customer Config
       run: |
-        chmod +x $CONFIG_SH
         cd openwrt
-        ../$CONFIG_SH
+        chmod +x $CONFIG_SH
+        ./$CONFIG_SH
           
 
     # 界面化配置,等待SSH连接 
