@@ -86,7 +86,6 @@ jobs:
 
     - name: Load Customer Config
       run: |
-        cd openwrt
         chmod +x $CONFIG_SH
         ./$CONFIG_SH
           
