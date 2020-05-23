@@ -16,16 +16,16 @@ on:
       - master
     paths:
       - '.config'
- # schedule:
- #   - cron: 0 8 * * 5
+  schedule:
+    - cron: 0 16 * * 6
   watch:
     types: started
 
 env:
-  REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: dev-19.07
-  # REPO_URL: https://github.com/coolsnowwolf/lede
-  # REPO_BRANCH: master
+  #REPO_URL: https://github.com/Lienol/openwrt
+  #REPO_BRANCH: dev-19.07
+  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_BRANCH: master
   CONFIG_FILE: .config
   SOFT_SH: soft.sh
   DIY_SH: diy.sh
@@ -33,6 +33,8 @@ env:
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
+  UPLOAD_COWTRANSFER: true
+  UPLOAD_WETRANSFER: false
   TZ: Asia/Shanghai
 
 jobs:
@@ -44,7 +46,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Initialization environment
+    - name: 初始化环境
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
@@ -54,20 +56,23 @@ jobs:
         sudo -E apt-get -qq install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib
         sudo -E apt-get -qq autoremove --purge
         sudo -E apt-get -qq clean
+        sudo timedatectl set-timezone "$TZ"
         curl -fsSL https://raw.githubusercontent.com/P3TERX/dotfiles/master/.bashrc >> ~/.bashrc
 
-    - name: Clone source code
+    - name: 克隆代码
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
     # 界面化配置,等待SSH连接 
-    # - name: SSH connection to Actions
+    # - name: 等待SSH连接
     #   uses: P3TERX/debugger-action@master
     #   if: env.SSH_ACTIONS == 'true'
 
-    - name: Load Soft Config
+    - name: 执行soft.sh
       run: |
+        [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $SOFT_SH
-        ./$SOFT_SH
+        cd openwrt
+        ../$SOFT_SH
 
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
@@ -75,7 +80,7 @@ jobs:
     - name: Install feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: Load DIY Config
+    - name: 执行diy.sh
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
@@ -83,7 +88,7 @@ jobs:
         cd openwrt
         ../$DIY_SH
 
-    - name: Load Customer Config
+    - name: 执行config.sh
       run: |
         chmod +x $CONFIG_SH
         ./$CONFIG_SH
@@ -133,3 +138,17 @@ jobs:
       with:
         name: OpenWrt_firmware
         path: ${{ env.FIRMWARE }}
+
+    - name: 上传到奶牛快传
+      if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
+      run: |
+        curl -fsSL git.io/file-transfer | sh
+        ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
+        echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
+
+    - name: 上传到WeTransfer
+      if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
+      run: |
+        curl -fsSL git.io/file-transfer | sh
+        ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
+        echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
