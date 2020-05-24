@@ -1,7 +1,7 @@
 # 自定义软件
 echo "开始 github Soft 配置"
 ls -l
-cd package/libs 
+cd package/lean 
 ls -l
 # git clone https://github.com/Lienol/openwrt-package/blob/master/lienol/luci-app-passwall
 # git clone https://github.com/Lienol/openwrt/blob/dev-19.07/package/diy/frp/
@@ -18,5 +18,3 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
 # adguardhome
 git clone https://github.com/garypang13/openwrt-adguardhome
-# 可道云
-git clone https://github.com/garypang13/luci-app-php-kodexplorer

@@ -83,39 +83,51 @@ CONFIG_PACKAGE_kmod-usb3=y
 EOF
 
 # 常用LuCI插件选择:
+# CONFIG_PACKAGE_luci-app-adbyby-plus=y
+# CONFIG_PACKAGE_luci-app-aria2=y
+# CONFIG_PACKAGE_luci-app-baidupcs-web=y
+# CONFIG_PACKAGE_luci-app-frpc=y
+# CONFIG_PACKAGE_luci-app-amule=y
+# CONFIG_PACKAGE_luci-app-qbittorrent=y
+# CONFIG_PACKAGE_luci-app-filetransfer=y
+# CONFIG_PACKAGE_luci-app-samba4=y
+# CONFIG_PACKAGE_luci-app-unblockmusic=y
+# CONFIG_PACKAGE_luci-app-upnp=y
+
+
+# CONFIG_PACKAGE_luci-app-passwall=y
+# CONFIG_PACKAGE_luci-app-ssr-plus=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+# CONFIG_PACKAGE_luci-app-v2ray-server=y
+
+# CONFIG_PACKAGE_luci-app-webadmin=y
+# CONFIG_PACKAGE_luci-app-wireguard=y
+# CONFIG_PACKAGE_luci-app-wrtbwmon=y
+
+# CONFIG_PACKAGE_luci-app-passwall=n
+# CONFIG_PACKAGE_luci-app-verysync=n
+# CONFIG_PACKAGE_luci-app-docker=n
+# CONFIG_PACKAGE_luci-app-kodexplorer=n
+# CONFIG_PACKAGE_luci-app-openvpn=n
+# CONFIG_PACKAGE_luci-app-openvpn-server=n
+# CONFIG_PACKAGE_luci-app-minidlna=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=n
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-aria2=y
 CONFIG_PACKAGE_luci-app-baidupcs-web=y
 CONFIG_PACKAGE_luci-app-frpc=y
-CONFIG_PACKAGE_luci-app-amule=y
 CONFIG_PACKAGE_luci-app-qbittorrent=y
-CONFIG_PACKAGE_luci-app-filetransfer=y
-CONFIG_PACKAGE_luci-app-samba4=y
-CONFIG_PACKAGE_luci-app-unblockmusic=y
-CONFIG_PACKAGE_luci-app-upnp=y
-
-
-CONFIG_PACKAGE_luci-app-passwall=y
-CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
 CONFIG_PACKAGE_luci-app-v2ray-server=y
-
 CONFIG_PACKAGE_luci-app-webadmin=y
 CONFIG_PACKAGE_luci-app-wireguard=y
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
 
-CONFIG_PACKAGE_luci-app-passwall=n
-CONFIG_PACKAGE_luci-app-verysync=n
-CONFIG_PACKAGE_luci-app-docker=n
-CONFIG_PACKAGE_luci-app-kodexplorer=n
-CONFIG_PACKAGE_luci-app-openvpn=n
-CONFIG_PACKAGE_luci-app-openvpn-server=n
-CONFIG_PACKAGE_luci-app-minidlna=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=n
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=n
 EOF
 
 # LuCI主题:
