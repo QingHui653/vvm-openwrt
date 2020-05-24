@@ -26,6 +26,7 @@ env:
   #REPO_BRANCH: dev-19.07
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
+  FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   SOFT_SH: soft.sh
   DIY_SH: diy.sh
