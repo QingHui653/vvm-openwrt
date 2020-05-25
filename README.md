@@ -8,7 +8,7 @@
 4. [Lienol{带passwall}](https://github.com/Lienol/openwrt)
 5. [云编译](https://zhuanlan.zhihu.com/p/94402324)
 6. [配置修改](https://zhuanlan.zhihu.com/p/94527343)
-7. [WSL编译](https://www.jmwww.net/file/14188.html) WSL位置: \\wsl$\UBuntu-18.04\home\qh\lede\bin\targets\x86\64
+7. [WSL编译](https://www.jmwww.net/file/14188.html) WSL位置: C:\Users\woshizbh\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs
 8. [WSL编译问题](https://p3terx.com/archives/compiling-openwrt-with-wsl.html) 
 
 ### 插件列表
