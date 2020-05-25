@@ -69,6 +69,7 @@ jobs:
 
     - name: 执行soft.sh
       run: |
+        pwd
         chmod +x $SOFT_SH
         cd openwrt
         ../$SOFT_SH
@@ -81,6 +82,7 @@ jobs:
 
     - name: 执行diy.sh
       run: |
+        pwd
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_SH
@@ -89,6 +91,7 @@ jobs:
 
     - name: 执行config.sh
       run: |
+        pwd
         chmod +x $CONFIG_SH
         ./$CONFIG_SH
           
@@ -101,6 +104,7 @@ jobs:
     - name: Download package
       id: package
       run: |
+        pwd
         cd openwrt
         make download -j8
         find ./dl/ -size -1024c -exec rm -f {} \;
@@ -108,6 +112,7 @@ jobs:
     - name: Compile the firmware
       id: compile
       run: |
+        pwd
         cd openwrt
         echo -e "$(nproc) thread compile"
         make -j$(nproc) V=s
@@ -130,6 +135,7 @@ jobs:
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
       run: |
+        pwd
         cd openwrt/bin/targets/*/*
         rm -rf packages
         echo "::set-env name=FIRMWARE::$PWD"
@@ -145,6 +151,7 @@ jobs:
     - name: 上传到奶牛快传
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
       run: |
+        pwd
         curl -fsSL git.io/file-transfer | sh
         ./transfer cow --block 2621440 -s -p 64 --no-progress ${FIRMWARE} 2>&1 | tee cowtransfer.log
         echo "::warning file=cowtransfer.com::$(cat cowtransfer.log | grep https)"
@@ -152,6 +159,7 @@ jobs:
     - name: 上传到WeTransfer
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
       run: |
+        pwd
         curl -fsSL git.io/file-transfer | sh
         ./transfer wet -s -p 16 --no-progress ${FIRMWARE} 2>&1 | tee wetransfer.log
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
