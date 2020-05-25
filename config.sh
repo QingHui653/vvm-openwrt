@@ -44,23 +44,30 @@ touch ./.config
 
 # 编译x64固件:
 cat >> .config <<EOF
+# CONFIG_MODULES=y
+# CONFIG_HAVE_DOT_CONFIG=y
+
 CONFIG_TARGET_x86=y
 CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_Generic=y
 EOF
+
 # 固件压缩:
 cat >> .config <<EOF
 CONFIG_TARGET_IMAGES_GZIP=y
 EOF
+
 # 编译UEFI固件:
 cat >> .config <<EOF
-CONFIG_EFI_IMAGES=y
+CONFIG_EFI_IMAGES=n
 EOF
+
 # IPv6支持:
 cat >> .config <<EOF
 CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 CONFIG_PACKAGE_ipv6helper=y
 EOF
+
 # 多文件系统支持:
 cat >> .config <<EOF
 CONFIG_PACKAGE_kmod-fs-nfs=y
@@ -70,6 +77,7 @@ CONFIG_PACKAGE_kmod-fs-nfs-v4=y
 CONFIG_PACKAGE_kmod-fs-ntfs=y
 CONFIG_PACKAGE_kmod-fs-squashfs=y
 EOF
+
 # USB3.0支持:
 cat >> .config <<EOF
 CONFIG_PACKAGE_kmod-usb-ohci=y
@@ -78,37 +86,91 @@ CONFIG_PACKAGE_kmod-usb2=y
 CONFIG_PACKAGE_kmod-usb2-pci=y
 CONFIG_PACKAGE_kmod-usb3=y
 EOF
-# 常用LuCI插件选择:
+
+# 系统功能
+cat >> .config <<EOF
+CONFIG_DEFAULT_automount=y
+CONFIG_DEFAULT_autosamba=y
+CONFIG_DEFAULT_fdisk=y
+EOF
+
+# SSR
+cat >> .config <<EOF
+CONFIG_DEFAULT_luci-app-ssr-plus=y
+EOF
+
+# 下载插件
+cat >> .config <<EOF
+CONFIG_PACKAGE_luci-app-aria2=y
+CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
+CONFIG_PACKAGE_aria2=y
+
+CONFIG_PACKAGE_luci-app-baidupcs-web=y
+CONFIG_PACKAGE_baidupcs-web=y
+
+CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_frpc=y
+
+CONFIG_PACKAGE_luci-app-amule=y
+CONFIG_PACKAGE_luci-i18n-amule-zh-cn=y
+CONFIG_PACKAGE_amule=y
+
+
+CONFIG_PACKAGE_luci-app-qbittorrent=y
+CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=y
+CONFIG_PACKAGE_qBittorrent=y
+
+CONFIG_PACKAGE_luci-app-samba=y
+CONFIG_PACKAGE_luci-i18n-samba-zh-cn=y
+
+CONFIG_PACKAGE_luci-app-filetransfer=y
+CONFIG_PACKAGE_luci-i18n-filetransfer-zh-cn=y
+EOF
+
+# 广告过滤
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
-CONFIG_PACKAGE_luci-app-aria2=y
-CONFIG_PACKAGE_luci-app-baidupcs-web=y
-# CONFIG_PACKAGE_luci-app-docker=y
-CONFIG_PACKAGE_luci-app-frpc=y
-# CONFIG_PACKAGE_luci-app-kodexplorer=y
-# CONFIG_PACKAGE_luci-app-minidlna=y
-# CONFIG_PACKAGE_luci-app-openvpn=y
-# CONFIG_PACKAGE_luci-app-openvpn-server=y
-CONFIG_PACKAGE_luci-app-qbittorrent=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-v2ray-server=y
-CONFIG_PACKAGE_luci-app-verysync=y
-CONFIG_PACKAGE_luci-app-webadmin=y
-CONFIG_PACKAGE_luci-app-wireguard=y
-CONFIG_PACKAGE_luci-app-wrtbwmon=y
+CONFIG_PACKAGE_luci-i18n-adbyby-plus-zh-cn=y
+CONFIG_PACKAGE_adbyby=y
 EOF
+
+
+# 其他插件
+cat >> .config <<EOF
+# music
+CONFIG_PACKAGE_luci-app-music-remote-center=y
+CONFIG_PACKAGE_luci-i18n-music-remote-center-zh-cn=y
+CONFIG_PACKAGE_luci-app-unblockmusic=y
+CONFIG_PACKAGE_luci-i18n-unblockmusic-zh-cn=y
+CONFIG_PACKAGE_UnblockNeteaseMusic=y
+CONFIG_UnblockNeteaseMusic_Go=y
+
+EOF
+
+
+# 其他配置
+cat >> .config <<EOF
+# Aria2 Configuration
+CONFIG_ARIA2_OPENSSL=y
+CONFIG_ARIA2_NOXML=y
+CONFIG_ARIA2_BITTORRENT=y
+CONFIG_ARIA2_WEBSOCKET=y
+CONFIG_PACKAGE_vsftpd-alt=y
+CONFIG_VSFTPD_USE_UCI_SCRIPTS=y
+CONFIG_PACKAGE_wget=y
+EOF
+
 # LuCI主题:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-argon=y
+CONFIG_PACKAGE_luci-theme-bootstrap=y
+CONFIG_PACKAGE_luci-theme-material=y
 CONFIG_PACKAGE_luci-theme-netgear=y
 EOF
+
 # 常用软件包:
 cat >> .config <<EOF
+CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
 CONFIG_PACKAGE_curl=y
 CONFIG_PACKAGE_htop=y
 CONFIG_PACKAGE_nano=y
@@ -116,14 +178,18 @@ CONFIG_PACKAGE_screen=y
 CONFIG_PACKAGE_tree=y
 CONFIG_PACKAGE_vim-fuller=y
 CONFIG_PACKAGE_wget=y
+CONFIG_DEFAULT_fdisk=y
 EOF
+
 # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
 cat >> .config <<EOF
-# CONFIG_TARGET_IMAGES_PAD is not set
-# CONFIG_VMDK_IMAGES is not set
+CONFIG_TARGET_IMAGES_PAD is not set
+CONFIG_VMDK_IMAGES is not set
 EOF
+
 # 
 # ========================固件定制部分结束========================
 # 
+
 sed -i 's/^[ \t]*//g' ./.config
 make defconfig
