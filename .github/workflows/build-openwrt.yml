@@ -118,7 +118,7 @@ jobs:
         pwd
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j1 V=s
+        make -j$(nproc) V=s
         echo "::set-output name=status::success"
 
     - name: 上传config
