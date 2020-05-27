@@ -194,7 +194,7 @@ jobs:
         prerelease: false     
 
     - name: 上传到 release
-      uses: actions/release-asset-action@master
+      uses: csexton/release-asset-action@master
       continue-on-error: true
       if: env.REPO_TOKEN
       with:
