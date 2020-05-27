@@ -33,7 +33,10 @@ env:
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
-  UPLOAD_WETRANSFER: true
+  UPLOAD_WETRANSFER: false
+  REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
+  PPPOE_USERNAME: ${{ secrets.PPPOE_USERNAME }}
+  PPPOE_PASSWD: ${{ secrets.PPPOE_PASSWD }}
   TZ: Asia/Shanghai
 
 jobs:
