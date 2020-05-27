@@ -92,11 +92,11 @@ jobs:
         make defconfig
         ../$DIY_SH
 
-    # - name: 执行config.sh
-    #   run: |
-    #     pwd
-    #     chmod +x $CONFIG_SH
-    #     ./$CONFIG_SH
+    - name: 执行config.sh
+      run: |
+        pwd
+        chmod +x $CONFIG_SH
+        ./$CONFIG_SH
           
 
     # 界面化配置,等待SSH连接 
