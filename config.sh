@@ -49,7 +49,7 @@ CONFIG_TARGET_IMAGES_GZIP=y
 EOF
 # 编译UEFI固件:
 cat >> .config <<EOF
-CONFIG_EFI_IMAGES=y
+CONFIG_EFI_IMAGES=n
 EOF
 # IPv6支持:
 cat >> .config <<EOF
@@ -93,11 +93,13 @@ CONFIG_PACKAGE_luci-app-passwall=y
 CONFIG_PACKAGE_luci-app-webadmin=y
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
 
-CONFIG_PACKAGE_luci-app-music-remote-center=n
-CONFIG_PACKAGE_luci-app-airplay2=n
-CONFIG_PACKAGE_luci-app-vsftpd=n
 EOF
-
+# 取消默认插件
+cat >> .config <<EOF
+# CONFIG_PACKAGE_luci-app-music-remote-center is not set
+# CONFIG_PACKAGE_luci-app-airplay2 is not set
+# CONFIG_PACKAGE_luci-app-vsftpd is not set
+EOF
 # LuCI主题:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-atmaterial=y
@@ -116,6 +118,7 @@ EOF
 cat >> .config <<EOF
 # CONFIG_TARGET_IMAGES_PAD is not set
 # CONFIG_VMDK_IMAGES is not set
+# CONFIG_TARGET_ROOTFS_INITRAMFS is not set
 EOF
 # 
 # ========================固件定制部分结束========================
