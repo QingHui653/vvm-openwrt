@@ -17,6 +17,8 @@ git clone https://github.com/kenzok8/small.git
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
 # SSR
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
+#helloworld
+# https://github.com/fw876/helloworld
 # openclash
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
 # adguardhome

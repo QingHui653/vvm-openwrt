@@ -84,6 +84,7 @@ CONFIG_PACKAGE_luci-app-samba=y
 CONFIG_PACKAGE_luci-app-filetransfer=y
 
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
+CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-unblockmusic=y
 
 CONFIG_PACKAGE_luci-app-ssr-plus=y
@@ -96,9 +97,18 @@ CONFIG_PACKAGE_luci-app-wrtbwmon=y
 EOF
 # 取消默认插件
 cat >> .config <<EOF
-# CONFIG_PACKAGE_luci-app-music-remote-center is not set
-# CONFIG_PACKAGE_luci-app-airplay2 is not set
-# CONFIG_PACKAGE_luci-app-vsftpd is not set
+CONFIG_PACKAGE_luci-app-music-remote-center=n
+CONFIG_PACKAGE_luci-app-airplay2=n
+CONFIG_PACKAGE_luci-app-vsftpd=n
+
+CONFIG_PACKAGE_luci-app-ddns=n
+CONFIG_PACKAGE_luci-app-xlnetacc=n
+CONFIG_PACKAGE_luci-app-wol=n
+CONFIG_PACKAGE_luci-app-accesscontrol=n
+
+CONFIG_PACKAGE_luci-app-zerotier=n
+CONFIG_PACKAGE_luci-app-openvpn-server=n
+CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
 EOF
 # LuCI主题:
 cat >> .config <<EOF
@@ -118,7 +128,6 @@ EOF
 cat >> .config <<EOF
 # CONFIG_TARGET_IMAGES_PAD is not set
 # CONFIG_VMDK_IMAGES is not set
-# CONFIG_TARGET_ROOTFS_INITRAMFS is not set
 EOF
 # 
 # ========================固件定制部分结束========================
