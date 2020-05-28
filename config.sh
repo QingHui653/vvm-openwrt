@@ -87,7 +87,7 @@ CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-unblockmusic=y
 
 CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_luci-app-clash=y
 CONFIG_PACKAGE_luci-app-passwall=y
 
 CONFIG_PACKAGE_luci-app-webadmin=y
@@ -97,6 +97,7 @@ CONFIG_PACKAGE_luci-app-music-remote-center=n
 CONFIG_PACKAGE_luci-app-airplay2=n
 CONFIG_PACKAGE_luci-app-vsftpd=n
 EOF
+
 # LuCI主题:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-atmaterial=y
