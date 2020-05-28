@@ -18,8 +18,7 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
 # SSR
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
 # openclash
-# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-clash
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
 # adguardhome
 # git clone https://github.com/garypang13/openwrt-adguardhome
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
