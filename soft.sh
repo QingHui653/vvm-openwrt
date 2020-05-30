@@ -30,7 +30,9 @@ rm luci-app-vssr/root/etc/dnsmasq.ssr/gfw_base.conf
 # openclash
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
 # adguardhome
-# git clone https://github.com/garypang13/openwrt-adguardhome
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
+git clone https://github.com/garypang13/openwrt-adguardhome
+# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 #KoolProxyR
 git clone https://github.com/jefferymvp/luci-app-koolproxyR
+#可道云
+git clone https://github.com/garypang13/luci-app-php-kodexplorer
