@@ -134,9 +134,8 @@ EOF
 
 # Image Options 分区设置
 cat >> .config <<EOF
-CONFIG_TARGET_KERNEL_PARTSIZE=30
+CONFIG_TARGET_KERNEL_PARTSIZE=50
 CONFIG_TARGET_ROOTFS_PARTSIZE=300
-# end of Target Images
 EOF
 # 
 # ========================固件定制部分结束========================
