@@ -82,7 +82,7 @@ CONFIG_PACKAGE_luci-app-baidupcs-web=y
 CONFIG_PACKAGE_luci-app-frpc=y
 CONFIG_PACKAGE_luci-app-samba=y
 CONFIG_PACKAGE_luci-app-filetransfer=y
-CONFIG_PACKAGE_luci-app-kodexplorer=y
+CONFIG_PACKAGE_luci-app-filebrowser=y
 
 CONFIG_PACKAGE_luci-app-koolproxyR=y
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
@@ -135,8 +135,8 @@ EOF
 
 # Image Options 分区设置
 cat >> .config <<EOF
-CONFIG_TARGET_KERNEL_PARTSIZE=50
-CONFIG_TARGET_ROOTFS_PARTSIZE=300
+CONFIG_TARGET_KERNEL_PARTSIZE=30
+CONFIG_TARGET_ROOTFS_PARTSIZE=200
 EOF
 # 
 # ========================固件定制部分结束========================

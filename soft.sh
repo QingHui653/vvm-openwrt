@@ -21,12 +21,12 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
 # https://github.com/fw876/helloworld
 git clone https://github.com/jerrykuku/lua-maxminddb.git
 git clone https://github.com/jerrykuku/luci-app-vssr.git  
-rm luci-app-vssr/root/etc/china_ssr.txt
-rm luci-app-vssr/root/etc/config/black.txt
-rm luci-app-vssr/root/etc/config/white.txt
-rm luci-app-vssr/root/etc/dnsmasq.oversea/oversea_list.conf
-rm luci-app-vssr/root/etc/dnsmasq.ssr/ad.conf
-rm luci-app-vssr/root/etc/dnsmasq.ssr/gfw_base.conf
+# rm luci-app-vssr/root/etc/china_ssr.txt
+# rm luci-app-vssr/root/etc/config/black.txt
+# rm luci-app-vssr/root/etc/config/white.txt
+# rm luci-app-vssr/root/etc/dnsmasq.oversea/oversea_list.conf
+# rm luci-app-vssr/root/etc/dnsmasq.ssr/ad.conf
+# rm luci-app-vssr/root/etc/dnsmasq.ssr/gfw_base.conf
 # openclash
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
 # adguardhome
@@ -34,5 +34,5 @@ git clone https://github.com/garypang13/openwrt-adguardhome
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 #KoolProxyR
 git clone https://github.com/jefferymvp/luci-app-koolproxyR
-#可道云
-git clone https://github.com/garypang13/luci-app-php-kodexplorer
+# 文件管理
+git clone https://github.com/lyin888/luci-app-filebrowser
