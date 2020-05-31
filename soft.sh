@@ -16,10 +16,10 @@ svn co https://github.com/solidus1983/luci-theme-opentomato/trunk/luci/themes/lu
 git clone https://github.com/kenzok8/small.git
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
 # SSR
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
+# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
+svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 #helloworld
-# https://github.com/fw876/helloworld
-git clone https://github.com/jerrykuku/lua-maxminddb.git
+# git clone https://github.com/jerrykuku/lua-maxminddb.git
 # git clone https://github.com/jerrykuku/luci-app-vssr.git  
 # rm luci-app-vssr/root/etc/china_ssr.txt
 # rm luci-app-vssr/root/etc/config/black.txt
@@ -27,14 +27,14 @@ git clone https://github.com/jerrykuku/lua-maxminddb.git
 # rm luci-app-vssr/root/etc/dnsmasq.oversea/oversea_list.conf
 # rm luci-app-vssr/root/etc/dnsmasq.ssr/ad.conf
 # rm luci-app-vssr/root/etc/dnsmasq.ssr/gfw_base.conf
-
-git clone https://github.com/liuwenwv/luci-app-vssr-plus
+git clone https://github.com/Leo-Jo-My/my.git
+git clone https://github.com/liuwenwv/luci-app-vssr-plus.git
 # openclash
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
 # adguardhome
-git clone https://github.com/garypang13/openwrt-adguardhome
-# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
 #KoolProxyR
-git clone https://github.com/jefferymvp/luci-app-koolproxyR
+git clone https://github.com/jefferymvp/luci-app-koolproxyR.git
 # 文件管理
-git clone https://github.com/lyin888/luci-app-filebrowser
+#git clone https://github.com/lyin888/luci-app-filebrowser.git
+git clone https://github.com/MonwF/luci-app-filebrowser.git
