@@ -165,7 +165,7 @@ jobs:
         cowurl=$(./transfer cow --block 2621440 -s --no-progress ${FIRMWARE})
         cowurl=$(echo $cowurl | grep -o -E "https[^ ]*")
         echo "::set-env name=COWURL::$cowurl"
-        echo "::warning file=cowtransfer.com::${{ env.COWURL }}"
+        echo "::warning file=cowtransfer.com::$cowurl"
 
     - name: 上传到WeTransfer
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
@@ -175,7 +175,7 @@ jobs:
         wetrans=$(./transfer wet -s -p 16 --no-progress ${FIRMWARE})
         wetrans=$(echo $wetrans | grep -o -E "https[^ ]*")
         echo "::set-env name=WETRANS::$wetrans"
-        echo "::warning file=wetransfer.com:: ${{ env.WETRANS }}"
+        echo "::warning file=wetransfer.com::$wetrans"
 
     - name: 创建 release
       id: create_release
