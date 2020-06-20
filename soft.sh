@@ -53,4 +53,4 @@ git clone https://github.com/MonwF/luci-app-filebrowser.git
 
 # baidupcs-web 删库,等LEDE修复,先使用 此仓库
 rm -rf baidupcs-web
-svn co https://github.com/garypang13/Actions-OpenWrt-Nginx/trunk/diy/feeds/custom/luci/baidupcs-web
+git clone https://github.com/KFERMercer/openwrt-baidupcs-web.git baidupcs-web
