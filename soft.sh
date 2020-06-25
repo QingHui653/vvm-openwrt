@@ -54,4 +54,4 @@ svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-filebrows
 
 # baidupcs-web 删库,等LEDE修复,先使用 此仓库
 rm -rf baidupcs-web
-svn co https://github.com/garypang13/Actions-OpenWrt-Nginx/trunk/diy/feeds/custom/luci/baidupcs-web
+svn co https://github.com/garypang13/Actions-OpenWrt-Nginx/trunk/common/diy/feeds/custom/luci/baidupcs-web
