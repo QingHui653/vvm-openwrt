@@ -76,7 +76,7 @@ EOF
 # 常用LuCI插件选择:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-aria2=y
-CONFIG_PACKAGE_luci-app-amule=y
+CONFIG_PACKAGE_luci-app-amule=n
 CONFIG_PACKAGE_luci-app-qbittorrent=n
 CONFIG_PACKAGE_luci-app-baidupcs-web=y
 CONFIG_PACKAGE_luci-app-frpc=y
@@ -86,11 +86,11 @@ CONFIG_PACKAGE_luci-app-filebrowser=y
 
 CONFIG_PACKAGE_luci-app-koolproxyR=y
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
-CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_luci-app-adguardhome=n
 CONFIG_PACKAGE_luci-app-unblockmusic=y
 
 CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-app-vssr=y
+CONFIG_PACKAGE_luci-app-vssr=n
 # CONFIG_PACKAGE_luci-app-vssr-plus=y
 CONFIG_PACKAGE_luci-app-openclash=n
 CONFIG_PACKAGE_luci-app-passwall=y
@@ -117,7 +117,7 @@ EOF
 # LuCI主题:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-atmaterial=y
-CONFIG_PACKAGE_luci-theme-argon=y
+CONFIG_PACKAGE_luci-theme-argon=n
 EOF
 # 常用软件包:
 cat >> .config <<EOF
