@@ -67,8 +67,6 @@ CONFIG_PACKAGE_kmod-fs-squashfs=y
 EOF
 # USB3.0支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_kmod-usb-ohci=y
-CONFIG_PACKAGE_kmod-usb-ohci-pci=y
 CONFIG_PACKAGE_kmod-usb2=y
 CONFIG_PACKAGE_kmod-usb2-pci=y
 CONFIG_PACKAGE_kmod-usb3=y
@@ -82,7 +80,8 @@ CONFIG_PACKAGE_luci-app-baidupcs-web=y
 
 CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_luci-app-frpc=y
-CONFIG_PACKAGE_luci-app-samba=y
+CONFIG_PACKAGE_luci-app-samba=n
+CONFIG_PACKAGE_luci-app-samba4=y
 CONFIG_PACKAGE_luci-app-filetransfer=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
 
