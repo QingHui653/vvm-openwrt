@@ -80,15 +80,14 @@ CONFIG_PACKAGE_luci-app-baidupcs-web=y
 
 CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_luci-app-frpc=y
-CONFIG_PACKAGE_luci-app-samba=n
-
 
 CONFIG_PACKAGE_autosamba=n
+CONFIG_PACKAGE_luci-app-samba=n
 CONFIG_PACKAGE_samba36-server=n
-CONFIG_PACKAGE_luci-app-samba4=y
 
-CONFIG_PACKAGE_luci-app-cifsd=n
-CONFIG_PACKAGE_luci-app-cifs-mount=n
+# ipad无法查找
+CONFIG_PACKAGE_luci-app-cifsd=y
+
 CONFIG_PACKAGE_luci-app-filetransfer=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
 
@@ -119,6 +118,11 @@ CONFIG_PACKAGE_luci-app-ddns=n
 CONFIG_PACKAGE_luci-app-xlnetacc=n
 CONFIG_PACKAGE_luci-app-wol=n
 CONFIG_PACKAGE_luci-app-accesscontrol=n
+
+# 比Samba3无优势
+CONFIG_PACKAGE_luci-app-samba4=n
+# 挂载远程共享
+CONFIG_PACKAGE_luci-app-cifs-mount=n
 
 CONFIG_PACKAGE_luci-app-openvpn-server=n
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
