@@ -79,6 +79,8 @@ CONFIG_PACKAGE_luci-app-aria2=y
 CONFIG_PACKAGE_luci-app-amule=n
 CONFIG_PACKAGE_luci-app-qbittorrent=n
 CONFIG_PACKAGE_luci-app-baidupcs-web=y
+
+CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_luci-app-frpc=y
 CONFIG_PACKAGE_luci-app-samba=y
 CONFIG_PACKAGE_luci-app-filetransfer=y
@@ -110,7 +112,6 @@ CONFIG_PACKAGE_luci-app-xlnetacc=n
 CONFIG_PACKAGE_luci-app-wol=n
 CONFIG_PACKAGE_luci-app-accesscontrol=n
 
-CONFIG_PACKAGE_luci-app-zerotier=n
 CONFIG_PACKAGE_luci-app-openvpn-server=n
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
 EOF
