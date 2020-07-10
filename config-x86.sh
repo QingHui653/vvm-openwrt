@@ -83,6 +83,7 @@ CONFIG_PACKAGE_luci-app-frpc=y
 CONFIG_PACKAGE_luci-app-samba=n
 CONFIG_PACKAGE_luci-app-samba4=n
 CONFIG_PACKAGE_luci-app-cifsd=y
+CONFIG_PACKAGE_luci-app-cifs-mount=y
 CONFIG_PACKAGE_luci-app-filetransfer=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
 
