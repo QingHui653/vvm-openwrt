@@ -42,7 +42,8 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
 # adguardhome  编译问题(https://github.com/rufengsuixing/luci-app-adguardhome/issues/83)
 # 暂时先进入 github release 下载 ipk安装
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
-git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
+svn co https://github.com/rufengsuixing/luci-app-adguardhome/branches/beta/
 
 #KoolProxyR
 # git clone https://github.com/jefferymvp/luci-app-koolproxyR.git

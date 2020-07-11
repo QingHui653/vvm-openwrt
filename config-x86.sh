@@ -78,7 +78,6 @@ CONFIG_PACKAGE_luci-app-amule=n
 CONFIG_PACKAGE_luci-app-qbittorrent=n
 CONFIG_PACKAGE_luci-app-baidupcs-web=y
 
-CONFIG_PACKAGE_luci-app-zerotier=y
 CONFIG_PACKAGE_luci-app-frpc=y
 
 CONFIG_PACKAGE_autosamba=n
@@ -93,7 +92,7 @@ CONFIG_PACKAGE_luci-app-filebrowser=y
 
 CONFIG_PACKAGE_luci-app-koolproxyR=y
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
-CONFIG_PACKAGE_luci-app-adguardhome=n
+CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-unblockmusic=y
 CONFIG_UnblockNeteaseMusic_Go=n
 CONFIG_UnblockNeteaseMusic_NodeJS=y
@@ -118,6 +117,9 @@ CONFIG_PACKAGE_luci-app-ddns=n
 CONFIG_PACKAGE_luci-app-xlnetacc=n
 CONFIG_PACKAGE_luci-app-wol=n
 CONFIG_PACKAGE_luci-app-accesscontrol=n
+
+# zerotier内网穿透,使用VPN
+CONFIG_PACKAGE_luci-app-zerotier=n
 
 # 比Samba3无优势
 CONFIG_PACKAGE_luci-app-samba4=n
