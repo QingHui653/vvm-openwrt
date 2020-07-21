@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build OpenWrt
+name: Build_5.4_OpenWrt
 
 on:
   #release:
@@ -31,7 +31,7 @@ env:
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: true
-  UPLOAD_WETRANSFER: false
+  UPLOAD_WETRANSFER: true
   UPLOAD_FIRMWARE_FOR_RELEASE: false
   REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
   PPPOE_USERNAME: ${{ secrets.PPPOE_USERNAME }}
@@ -184,7 +184,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       with:
         tag_name: ${{ env.date }}
-        release_name: ${{ env.date2 }} ${{ env.EMOJI }}
+        release_name: 5.4_${{ env.date2 }} ${{ env.EMOJI }}
         body: |
             墙内加速下载🔥:
             
