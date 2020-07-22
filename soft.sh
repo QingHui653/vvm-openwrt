@@ -47,7 +47,8 @@ svn co https://github.com/rufengsuixing/luci-app-adguardhome/branches/beta/
 
 #KoolProxyR
 # git clone https://github.com/jefferymvp/luci-app-koolproxyR.git
-git clone https://github.com/ycg31/luci-app-koolproxyR.git
+# git clone https://github.com/ycg31/luci-app-koolproxyR.git
+svn co https://github.com/firker/diy-ziyong/trunk/luci-app-koolproxyR
 
 # 文件管理 无法编译安装 进入github下载ipk手动安装
 #git clone https://github.com/lyin888/luci-app-filebrowser.git
