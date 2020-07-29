@@ -59,4 +59,5 @@ git clone https://github.com/MonwF/luci-app-filebrowser.git
 # svn co https://github.com/garypang13/Actions-OpenWrt-Nginx/trunk/common/diy/feeds/custom/luci/baidupcs-web
 
 # 京东签到
+git clone https://github.com/jerrykuku/node-request.git
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
