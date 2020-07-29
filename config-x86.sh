@@ -107,6 +107,8 @@ CONFIG_PACKAGE_luci-app-passwall=y
 CONFIG_PACKAGE_luci-app-webadmin=y
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
 
+CONFIG_PACKAGE_luci-app-jd-dailybonus=y
+
 EOF
 # 取消默认插件
 cat >> .config <<EOF

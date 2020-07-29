@@ -47,7 +47,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@main
 
     - name: 初始化环境
       env:
@@ -55,7 +55,7 @@ jobs:
       run: |
         sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d
         sudo -E apt-get update
-        sudo -E apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf
+        sudo -E apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3.5 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget swig rsync
         sudo -E apt-get -y autoremove --purge
         sudo -E apt-get clean
         sudo timedatectl set-timezone "$TZ"
@@ -76,7 +76,7 @@ jobs:
 
     # 界面化配置,等待SSH连接 
     # - name: 等待SSH连接
-    #   uses: P3TERX/debugger-action@master
+    #   uses: P3TERX/debugger-action@main
     #   if: env.SSH_ACTIONS == 'true'
 
     - name: 执行 soft.sh
@@ -113,7 +113,7 @@ jobs:
 
     # 界面化配置,等待SSH连接 
     # - name: SSH connection to Actions
-    #   uses: P3TERX/debugger-action@master
+    #   uses: P3TERX/debugger-action@main
     #   if: env.SSH_ACTIONS == 'true'
 
     - name: 下载 package
@@ -134,7 +134,7 @@ jobs:
         echo "::set-output name=status::success"
 
     - name: 上传 bin 目录
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
         name: OpenWrt_directory
@@ -151,7 +151,7 @@ jobs:
         echo "::set-output name=status::success"
 
     - name: Upload firmware directory
-      uses: actions/upload-artifact@master
+      uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         name: OpenWrt_firmware
@@ -179,7 +179,7 @@ jobs:
 
     - name: 创建 release
       id: create_release
-      uses: actions/create-release@master
+      uses: actions/create-release@main
       continue-on-error: true
       if: env.REPO_TOKEN && env.UPLOAD_FIRMWARE_FOR_RELEASE == 'true'
       env:
@@ -198,7 +198,7 @@ jobs:
         prerelease: false     
 
     - name: 上传到 release
-      uses: csexton/release-asset-action@master
+      uses: csexton/release-asset-action@main
       continue-on-error: true
       if: env.REPO_TOKEN && env.UPLOAD_FIRMWARE_FOR_RELEASE == 'true'
       with:
