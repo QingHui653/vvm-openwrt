@@ -61,3 +61,18 @@ git clone https://github.com/MonwF/luci-app-filebrowser.git
 # 京东签到
 git clone https://github.com/jerrykuku/node-request.git
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
+
+# smartdns
+svn co https://github.com/firker/diy-ziyong/trunk/smartdns
+
+#透明网桥
+# svn co https://github.com/kingyan/bridge/trunk/luci-app-bridge
+
+#灵缇游戏加速
+# git clone https://github.com/esirplayground/luci-app-LingTiGameAcc
+
+#应用过滤 https://github.com/destan19/OpenAppFilter
+# git clone https://github.com/destan19/OpenAppFilter.git
+# rm package/lean/luci-app-flowoffload -fr
+# rm package/lean/shortcut-fe/ -fr
+# rm package/lean/luci-app-sfe/ -fr
