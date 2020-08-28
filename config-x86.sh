@@ -53,8 +53,17 @@ CONFIG_EFI_IMAGES=y
 EOF
 # IPv6支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_dnsmasq_full_dhcpv6=n
-CONFIG_PACKAGE_ipv6helper=n
+CONFIG_IPV6=y
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_odhcp6c=y
+CONFIG_PACKAGE_odhcpd-ipv6only=y
+CONFIG_PACKAGE_luci-proto-ipv6=y
+CONFIG_PACKAGE_kmod-ipt-nat6=y
+CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_kmod-ip6tables=y
+CONFIG_PACKAGE_kmod-ip6tables-extra=y
+CONFIG_PACKAGE_6in4=y
 EOF
 # 多文件系统支持:
 cat >> .config <<EOF
@@ -110,9 +119,6 @@ CONFIG_PACKAGE_luci-app-wrtbwmon=y
 CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 
 CONFIG_PACKAGE_luci-app-smartdns=y
-CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
-CONFIG_PACKAGE_smartdns=y
-
 EOF
 # 取消默认插件
 cat >> .config <<EOF

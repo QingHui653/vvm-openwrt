@@ -39,22 +39,32 @@ touch ./.config
 # 
 # 编译x64固件:
 cat >> .config <<EOF
-CONFIG_TARGET_x86=y
-CONFIG_TARGET_x86_64=y
-CONFIG_TARGET_x86_64_Generic=y
+CONFIG_TARGET_ramips=y
+CONFIG_TARGET_ramips_mt7621=y
+CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_redmi-router-ac2100=y
 EOF
 # 固件压缩:
 cat >> .config <<EOF
-CONFIG_TARGET_IMAGES_GZIP=y
+CONFIG_TARGET_ROOTFS_TARGZ=y
+CONFIG_TARGET_ROOTFS_SQUASHFS=y
+CONFIG_TARGET_KERNEL_PARTSIZE=64
+CONFIG_TARGET_ROOTFS_PARTSIZE=1000
 EOF
-# 编译UEFI固件:
-cat >> .config <<EOF
-CONFIG_EFI_IMAGES=y
-EOF
+
+
 # IPv6支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_dnsmasq_full_dhcpv6=n
-CONFIG_PACKAGE_ipv6helper=n
+CONFIG_IPV6=y
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_odhcp6c=y
+CONFIG_PACKAGE_odhcpd-ipv6only=y
+CONFIG_PACKAGE_luci-proto-ipv6=y
+CONFIG_PACKAGE_kmod-ipt-nat6=y
+CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_kmod-ip6tables=y
+CONFIG_PACKAGE_kmod-ip6tables-extra=y
+CONFIG_PACKAGE_6in4=y
 EOF
 # 多文件系统支持:
 cat >> .config <<EOF
@@ -67,51 +77,36 @@ CONFIG_PACKAGE_kmod-fs-squashfs=y
 EOF
 # USB3.0支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_kmod-usb2=y
-CONFIG_PACKAGE_kmod-usb2-pci=y
-CONFIG_PACKAGE_kmod-usb3=y
+
 EOF
+
+# 无线驱动:
+cat >> .config <<EOF
+CONFIG_PACKAGE_wireless-regdb=y
+CONFIG_PACKAGE_kmod-cfg80211=y
+CONFIG_PACKAGE_kmod-mac80211=y
+CONFIG_PACKAGE_MAC80211_DEBUGFS=y
+CONFIG_PACKAGE_MAC80211_MESH=y
+EOF
+
 # 常用LuCI插件选择:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-aria2=y
-CONFIG_PACKAGE_ariang=n
-CONFIG_PACKAGE_luci-app-amule=y
-CONFIG_PACKAGE_luci-app-qbittorrent=n
-CONFIG_PACKAGE_luci-app-baidupcs-web=y
 
-CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-accesscontrol=y
 
-CONFIG_PACKAGE_autosamba=n
-CONFIG_PACKAGE_luci-app-samba=n
-CONFIG_PACKAGE_samba36-server=n
-
-# ipad无法查找
-CONFIG_PACKAGE_luci-app-cifsd=y
-
-CONFIG_PACKAGE_luci-app-filetransfer=y
-CONFIG_PACKAGE_luci-app-filebrowser=y
+CONFIG_PACKAGE_luci-app-guest-wifi=y
+CONFIG_PACKAGE_luci-i18n-guest-wifi-zh-cn=y
 
 CONFIG_PACKAGE_luci-app-koolproxyR=y
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
-CONFIG_PACKAGE_luci-app-adguardhome=y
-CONFIG_PACKAGE_luci-app-unblockmusic=y
-CONFIG_UnblockNeteaseMusic_Go=n
-CONFIG_UnblockNeteaseMusic_NodeJS=y
 
 CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-app-vssr=n
-# CONFIG_PACKAGE_luci-app-vssr-plus=y
-CONFIG_PACKAGE_luci-app-openclash=y
-CONFIG_PACKAGE_luci-app-passwall=y
 
-CONFIG_PACKAGE_luci-app-webadmin=y
-CONFIG_PACKAGE_luci-app-wrtbwmon=y
+CONFIG_PACKAGE_luci-app-syncdial=y
+CONFIG_PACKAGE_luci-app-mwan3=y
+CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=y
 
-CONFIG_PACKAGE_luci-app-jd-dailybonus=y
-
-CONFIG_PACKAGE_luci-app-smartdns=y
-CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
-CONFIG_PACKAGE_smartdns=y
+CONFIG_PACKAGE_luci-app-flowoffload=y
 
 EOF
 # 取消默认插件
@@ -125,43 +120,33 @@ CONFIG_PACKAGE_luci-app-xlnetacc=n
 CONFIG_PACKAGE_luci-app-wol=n
 CONFIG_PACKAGE_luci-app-accesscontrol=n
 
-# zerotier内网穿透,使用VPN
 CONFIG_PACKAGE_luci-app-zerotier=n
-
-# 比Samba3无优势
-CONFIG_PACKAGE_luci-app-samba4=n
-# 挂载远程共享
-CONFIG_PACKAGE_luci-app-cifs-mount=n
-
 CONFIG_PACKAGE_luci-app-openvpn-server=n
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
 EOF
 # LuCI主题:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-atmaterial=y
-CONFIG_PACKAGE_luci-theme-argon=n
+CONFIG_PACKAGE_luci-theme-argon=y
 EOF
+
 # 常用软件包:
 cat >> .config <<EOF
+CONFIG_PACKAGE_bash=y
 CONFIG_PACKAGE_curl=y
 CONFIG_PACKAGE_htop=y
 CONFIG_PACKAGE_nano=y
-CONFIG_PACKAGE_screen=y
 CONFIG_PACKAGE_tree=y
-CONFIG_PACKAGE_vim-fuller=y
 CONFIG_PACKAGE_wget=y
+CONFIG_PACKAGE_fdisk=y
 EOF
+
 # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
 cat >> .config <<EOF
 # CONFIG_TARGET_IMAGES_PAD is not set
 # CONFIG_VMDK_IMAGES is not set
 EOF
 
-# Image Options 分区设置
-cat >> .config <<EOF
-CONFIG_TARGET_KERNEL_PARTSIZE=30
-CONFIG_TARGET_ROOTFS_PARTSIZE=300
-EOF
 # 
 # ========================固件定制部分结束========================
 # 
