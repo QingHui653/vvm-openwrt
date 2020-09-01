@@ -55,25 +55,13 @@ EOF
 # IPv6支持:
 cat >> .config <<EOF
 CONFIG_IPV6=y
+CONFIG_PACKAGE_dnsmasq-full=y
+CONFIG_PACKAGE_dnsmasq_full_dhcp=y
 CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
-CONFIG_PACKAGE_ipv6helper=y
-CONFIG_PACKAGE_odhcp6c=y
-CONFIG_PACKAGE_odhcpd-ipv6only=y
-CONFIG_PACKAGE_luci-proto-ipv6=y
-CONFIG_PACKAGE_kmod-ipt-nat6=y
-CONFIG_PACKAGE_ipv6helper=y
-CONFIG_PACKAGE_kmod-ip6tables=y
-CONFIG_PACKAGE_kmod-ip6tables-extra=y
-CONFIG_PACKAGE_6in4=y
 EOF
 # 多文件系统支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_kmod-fs-nfs=y
-CONFIG_PACKAGE_kmod-fs-nfs-common=y
-CONFIG_PACKAGE_kmod-fs-nfs-v3=y
-CONFIG_PACKAGE_kmod-fs-nfs-v4=y
-CONFIG_PACKAGE_kmod-fs-ntfs=y
-CONFIG_PACKAGE_kmod-fs-squashfs=y
+
 EOF
 # USB3.0支持:
 cat >> .config <<EOF
@@ -82,29 +70,31 @@ EOF
 
 # 无线驱动:
 cat >> .config <<EOF
-CONFIG_PACKAGE_wireless-regdb=y
-CONFIG_PACKAGE_kmod-cfg80211=y
-CONFIG_PACKAGE_kmod-mac80211=y
-CONFIG_PACKAGE_MAC80211_DEBUGFS=y
-CONFIG_PACKAGE_MAC80211_MESH=y
+CONFIG_DEFAULT_kmod-mt7603e=y
+CONFIG_DEFAULT_kmod-mt7615d=y
+CONFIG_DEFAULT_luci-app-mtwifi=y
 EOF
 
 # 常用LuCI插件选择:
 cat >> .config <<EOF
 
 CONFIG_PACKAGE_luci-app-accesscontrol=y
+CONFIG_PACKAGE_luci-app-filetransfer=y
 
 CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-i18n-guest-wifi-zh-cn=y
 
-CONFIG_PACKAGE_luci-app-koolproxyR=y
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 
+
 CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-unblockmusic=y
+CONFIG_UnblockNeteaseMusic_Go=n
+CONFIG_UnblockNeteaseMusic_NodeJS=y
 
 CONFIG_PACKAGE_luci-app-syncdial=y
 CONFIG_PACKAGE_luci-app-mwan3=y
-CONFIG_PACKAGE_luci-i18n-mwan3-zh-cn=y
+CONFIG_PACKAGE_luci-app-mwan3helper=y
 
 CONFIG_PACKAGE_luci-app-flowoffload=y
 
@@ -118,7 +108,6 @@ CONFIG_PACKAGE_luci-app-vsftpd=n
 CONFIG_PACKAGE_luci-app-ddns=n
 CONFIG_PACKAGE_luci-app-xlnetacc=n
 CONFIG_PACKAGE_luci-app-wol=n
-CONFIG_PACKAGE_luci-app-accesscontrol=n
 
 CONFIG_PACKAGE_luci-app-zerotier=n
 CONFIG_PACKAGE_luci-app-openvpn-server=n
@@ -138,7 +127,6 @@ CONFIG_PACKAGE_htop=y
 CONFIG_PACKAGE_nano=y
 CONFIG_PACKAGE_tree=y
 CONFIG_PACKAGE_wget=y
-CONFIG_PACKAGE_fdisk=y
 EOF
 
 # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
