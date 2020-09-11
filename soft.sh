@@ -20,8 +20,10 @@ git clone https://github.com/kenzok8/small.git
 svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall
 
 # SSR
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
-# svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
+# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
+svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
+svn co https://github.com/fw876/helloworld/trunk/naiveproxy
+svn co https://github.com/fw876/helloworld/trunk/tcping
 
 #helloworld
 git clone https://github.com/jerrykuku/lua-maxminddb.git
