@@ -85,6 +85,7 @@ CONFIG_PACKAGE_luci-app-guest-wifi=y
 CONFIG_PACKAGE_luci-i18n-guest-wifi-zh-cn=y
 
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
+CONFIG_PACKAGE_luci-app-koolproxyR=y
 
 
 CONFIG_PACKAGE_luci-app-ssr-plus=y
