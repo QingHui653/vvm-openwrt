@@ -78,24 +78,21 @@ EOF
 # 常用LuCI插件选择:
 cat >> .config <<EOF
 
-CONFIG_PACKAGE_luci-app-accesscontrol=y
 CONFIG_PACKAGE_luci-app-filetransfer=y
-
-CONFIG_PACKAGE_luci-app-guest-wifi=y
-CONFIG_PACKAGE_luci-i18n-guest-wifi-zh-cn=y
 
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-koolproxyR=y
 
 
 CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
+
 CONFIG_PACKAGE_luci-app-unblockmusic=y
 CONFIG_UnblockNeteaseMusic_Go=n
 CONFIG_UnblockNeteaseMusic_NodeJS=y
 
 CONFIG_PACKAGE_luci-app-syncdial=y
-CONFIG_PACKAGE_luci-app-mwan3=y
-CONFIG_PACKAGE_luci-app-mwan3helper=y
 
 CONFIG_PACKAGE_luci-app-flowoffload=y
 
