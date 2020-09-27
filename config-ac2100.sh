@@ -114,16 +114,13 @@ EOF
 # LuCI主题:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-atmaterial=y
-CONFIG_PACKAGE_luci-theme-argon=y
 EOF
 
 # 常用软件包:
 cat >> .config <<EOF
 CONFIG_PACKAGE_bash=y
 CONFIG_PACKAGE_curl=y
-CONFIG_PACKAGE_htop=y
 CONFIG_PACKAGE_nano=y
-CONFIG_PACKAGE_tree=y
 CONFIG_PACKAGE_wget=y
 EOF
 
