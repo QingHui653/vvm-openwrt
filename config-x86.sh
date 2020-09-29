@@ -110,8 +110,6 @@ CONFIG_PACKAGE_luci-app-wrtbwmon=y
 CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 
 CONFIG_PACKAGE_luci-app-smartdns=y
-CONFIG_PACKAGE_smartdns=y
-CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
 
 EOF
 # 取消默认插件

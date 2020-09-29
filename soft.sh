@@ -66,6 +66,7 @@ git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
 
 # smartdns
 svn co https://github.com/firker/diy-ziyong/trunk/smartdns
+svn co https://github.com/firker/diy-ziyong/trunk/luci-app-smartdns
 
 #透明网桥
 # svn co https://github.com/kingyan/bridge/trunk/luci-app-bridge
