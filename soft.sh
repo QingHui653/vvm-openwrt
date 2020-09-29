@@ -15,9 +15,10 @@ git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
 svn co https://github.com/solidus1983/luci-theme-opentomato/trunk/luci/themes/luci-theme-opentomato
 
 # passwall 
-git clone https://github.com/kenzok8/small.git
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
-svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall
+
+# git clone https://github.com/kenzok8/small.git
+# svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall
 
 # SSR
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
