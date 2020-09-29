@@ -45,13 +45,19 @@ CONFIG_TARGET_ramips_mt7621_DEVICE_xiaomi_redmi-router-ac2100=y
 EOF
 # 固件压缩:
 cat >> .config <<EOF
-
+CONFIG_TARGET_ROOTFS_TARGZ=y
+CONFIG_TARGET_ROOTFS_SQUASHFS=y
+CONFIG_TARGET_KERNEL_PARTSIZE=64
+CONFIG_TARGET_ROOTFS_PARTSIZE=1000
 EOF
 
 
 # IPv6支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_ipv6helper=y
+CONFIG_IPV6=y
+CONFIG_PACKAGE_dnsmasq-full=y
+CONFIG_PACKAGE_dnsmasq_full_dhcp=y
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 EOF
 # 多文件系统支持:
 cat >> .config <<EOF
@@ -64,7 +70,9 @@ EOF
 
 # 无线驱动:
 cat >> .config <<EOF
-
+CONFIG_DEFAULT_kmod-mt7603e=y
+CONFIG_DEFAULT_kmod-mt7615d=y
+CONFIG_DEFAULT_luci-app-mtwifi=y
 EOF
 
 # 常用LuCI插件选择:
@@ -83,7 +91,17 @@ CONFIG_PACKAGE_luci-app-flowoffload=y
 EOF
 # 取消默认插件
 cat >> .config <<EOF
+CONFIG_PACKAGE_luci-app-music-remote-center=n
+CONFIG_PACKAGE_luci-app-airplay2=n
+CONFIG_PACKAGE_luci-app-vsftpd=n
 
+CONFIG_PACKAGE_luci-app-ddns=n
+CONFIG_PACKAGE_luci-app-xlnetacc=n
+CONFIG_PACKAGE_luci-app-wol=n
+
+CONFIG_PACKAGE_luci-app-zerotier=n
+CONFIG_PACKAGE_luci-app-openvpn-server=n
+CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
 EOF
 # LuCI主题:
 cat >> .config <<EOF
