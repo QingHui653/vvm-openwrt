@@ -60,13 +60,13 @@ jobs:
     - name: 设置环境变量
       id: date
       run: |
-        echo "::set-env name=date::$(date +'%m/%d_%Y_%H/%M')"
-        echo "::set-env name=date2::$(date +'%m/%d %Y')"
-        echo "::set-env name=date3::$(date +'%m.%d')"
+        echo "name=date" >> $(date +'%m/%d_%Y_%H/%M')
+        echo "name=date2" >> $(date +'%m/%d %Y')
+        echo "name=date3" >> $(date +'%m.%d')
         Emoji=("🎉" "🤞" "✨" "🎁" "🎈" "🎄" "🎨" "💋" "🍓" "🍕" "🍉" "💐" "🌴" "🚀" "🛸" "🗽" "⛅" "🌈" "🔥" "⛄" "🐶" "🏅" "🦄" "🐤")
         RANDOM=$$$(date +%s)
         rand=$[$RANDOM % ${#Emoji[@]}]
-        echo "::set-env name=EMOJI::${Emoji[$rand]}"
+        echo "name=EMOJI" >> ${Emoji[$rand]}
     - name: 克隆代码
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
@@ -138,7 +138,7 @@ jobs:
         pwd
         cd openwrt/bin/targets/*/*
         rm -rf packages
-        echo "::set-env name=FIRMWARE::$PWD"
+        echo "name=FIRMWARE" >> $PWD
         echo "::set-output name=status::success"
     - name: Upload firmware directory
       uses: actions/upload-artifact@main
@@ -154,7 +154,7 @@ jobs:
         curl -fsSL git.io/file-transfer | sh
         cowurl=$(./transfer cow --block 2621440 -s --no-progress ${FIRMWARE})
         cowurl=$(echo $cowurl | grep -o -E "https[^ ]*")
-        echo "::set-env name=COWURL::$cowurl"
+        echo "name=COWURL" >> $cowurl
         echo "::warning file=cowtransfer.com::$cowurl"
     - name: 上传到WeTransfer
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
@@ -163,7 +163,7 @@ jobs:
         curl -fsSL git.io/file-transfer | sh
         wetrans=$(./transfer wet -s -p 16 --no-progress ${FIRMWARE})
         wetrans=$(echo $wetrans | grep -o -E "https[^ ]*")
-        echo "::set-env name=WETRANS::$wetrans"
+        echo "name=WETRANS" >> $wetrans
         echo "::warning file=wetransfer.com::$wetrans"
     - name: 创建 release
       id: create_release
