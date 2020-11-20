@@ -20,6 +20,7 @@ on:
     types: started
 
 env:
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
