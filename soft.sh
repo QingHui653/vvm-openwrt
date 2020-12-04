@@ -16,8 +16,8 @@ svn co https://github.com/solidus1983/luci-theme-opentomato/trunk/luci/themes/lu
 
 # passwall 
 git clone https://github.com/kenzok8/small.git
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
-# svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall
+# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
+svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
 
 # SSR
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
@@ -38,8 +38,8 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 # git clone https://github.com/liuwenwv/luci-app-vssr-plus.git
 
 # openclash
-# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
+# svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 
 # adguardhome  编译问题(https://github.com/rufengsuixing/luci-app-adguardhome/issues/83)
 # 暂时先进入 github release 下载 ipk安装
