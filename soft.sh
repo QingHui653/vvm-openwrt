@@ -38,8 +38,8 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 # git clone https://github.com/liuwenwv/luci-app-vssr-plus.git
 
 # openclash
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
-# svn co https://github.com/vernesong/OpenClash/branches/master/luci-app-openclash
+# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
+svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 
 # adguardhome  编译问题(https://github.com/rufengsuixing/luci-app-adguardhome/issues/83)
 # 暂时先进入 github release 下载 ipk安装
