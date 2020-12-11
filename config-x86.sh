@@ -76,8 +76,9 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-aria2=y
 CONFIG_PACKAGE_ariang=n
 CONFIG_PACKAGE_luci-app-amule=y
-CONFIG_PACKAGE_luci-app-qbittorrent=n
-CONFIG_PACKAGE_luci-app-baidupcs-web=y
+CONFIG_PACKAGE_luci-app-qbittorrent=y
+CONFIG_PACKAGE_luci-app-transmission=y
+CONFIG_PACKAGE_luci-app-baidupcs-web=n
 
 CONFIG_PACKAGE_luci-app-frpc=y
 
