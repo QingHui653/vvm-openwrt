@@ -109,6 +109,7 @@ CONFIG_PACKAGE_luci-app-webadmin=y
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
 
 CONFIG_PACKAGE_luci-app-jd-dailybonus=n
+CONFIG_PACKAGE_luci-app-uugamebooster=y
 
 CONFIG_PACKAGE_luci-app-smartdns=y
 

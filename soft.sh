@@ -61,9 +61,9 @@ git clone https://github.com/MonwF/luci-app-filebrowser.git
 # rm -rf baidupcs-web
 # svn co https://github.com/garypang13/Actions-OpenWrt-Nginx/trunk/common/diy/feeds/custom/luci/baidupcs-web
 
-# 京东签到
-git clone https://github.com/jerrykuku/node-request.git
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
+# 京东签到 (lede已添加)
+# git clone https://github.com/jerrykuku/node-request.git
+# git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
 
 # smartdns
 svn co https://github.com/firker/diy-ziyong/trunk/smartdns
