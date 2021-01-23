@@ -92,7 +92,7 @@ CONFIG_PACKAGE_luci-app-cifsd=y
 CONFIG_PACKAGE_luci-app-filetransfer=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
 
-CONFIG_PACKAGE_luci-app-koolproxyR=y
+CONFIG_PACKAGE_luci-app-koolproxyR=n
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-godproxy=y
