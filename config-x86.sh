@@ -95,6 +95,8 @@ CONFIG_PACKAGE_luci-app-filebrowser=y
 CONFIG_PACKAGE_luci-app-koolproxyR=y
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_luci-app-godproxy=y
+
 CONFIG_PACKAGE_luci-app-unblockmusic=y
 CONFIG_UnblockNeteaseMusic_Go=n
 CONFIG_UnblockNeteaseMusic_NodeJS=y
@@ -108,8 +110,8 @@ CONFIG_PACKAGE_luci-app-passwall=y
 CONFIG_PACKAGE_luci-app-webadmin=y
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
 
-CONFIG_PACKAGE_luci-app-jd-dailybonus=n
-CONFIG_PACKAGE_luci-app-uugamebooster=y
+CONFIG_PACKAGE_luci-app-jd-dailybonus=y
+CONFIG_PACKAGE_luci-app-uugamebooster=n
 
 CONFIG_PACKAGE_luci-app-smartdns=y
 
