@@ -24,6 +24,8 @@ svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn co https://github.com/fw876/helloworld/trunk/naiveproxy
 svn co https://github.com/fw876/helloworld/trunk/tcping
+svn co https://github.com/fw876/helloworld/trunk/xray
+svn co https://github.com/fw876/helloworld/trunk/ipt2socks-alt
 
 #helloworld
 git clone https://github.com/jerrykuku/lua-maxminddb.git
