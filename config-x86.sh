@@ -102,10 +102,11 @@ CONFIG_UnblockNeteaseMusic_Go=n
 CONFIG_UnblockNeteaseMusic_NodeJS=y
 
 CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-app-vssr=n
+#CONFIG_PACKAGE_luci-app-vssr=n
 # CONFIG_PACKAGE_luci-app-vssr-plus=y
+CONFIG_PACKAGE_luci-app-bypass=n
 CONFIG_PACKAGE_luci-app-openclash=y
-CONFIG_PACKAGE_luci-app-passwall=y
+#CONFIG_PACKAGE_luci-app-passwall=y
 
 CONFIG_PACKAGE_luci-app-webadmin=y
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
