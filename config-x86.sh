@@ -73,6 +73,8 @@ CONFIG_PACKAGE_kmod-usb3=y
 EOF
 # 常用LuCI插件选择:
 cat >> .config <<EOF
+
+# 下载软件 arir2,bt,pcs
 CONFIG_PACKAGE_luci-app-aria2=y
 CONFIG_PACKAGE_ariang=n
 CONFIG_PACKAGE_luci-app-amule=y
@@ -80,28 +82,33 @@ CONFIG_PACKAGE_luci-app-qbittorrent=y
 CONFIG_PACKAGE_luci-app-transmission=n
 CONFIG_PACKAGE_luci-app-baidupcs-web=n
 
+# 内网穿透
 CONFIG_PACKAGE_luci-app-frpc=y
 
+# 网络共享
 CONFIG_PACKAGE_autosamba=n
 CONFIG_PACKAGE_luci-app-samba=n
 CONFIG_PACKAGE_samba36-server=n
 
-# ipad无法查找
 CONFIG_PACKAGE_luci-app-cifsd=y
 
+# 文件管理
 CONFIG_PACKAGE_luci-app-filetransfer=y
 CONFIG_PACKAGE_luci-app-filebrowser=y
 
+# 广告过滤
 CONFIG_PACKAGE_luci-app-koolproxyR=n
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-godproxy=y
 CONFIG_PACKAGE_luci-app-dnsfilter=y
 
+# 网易云
 CONFIG_PACKAGE_luci-app-unblockmusic=y
 CONFIG_UnblockNeteaseMusic_Go=n
 CONFIG_UnblockNeteaseMusic_NodeJS=y
 
+# vpn
 CONFIG_PACKAGE_luci-app-ssr-plus=y
 #CONFIG_PACKAGE_luci-app-vssr=n
 # CONFIG_PACKAGE_luci-app-vssr-plus=y
@@ -112,11 +119,10 @@ CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-webadmin=y
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
 
+# 其他软件(京东签到,UU,smartdns,netdata)
 CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 CONFIG_PACKAGE_luci-app-uugamebooster=n
-
 CONFIG_PACKAGE_luci-app-smartdns=y
-
 CONFIG_PACKAGE_luci-app-netdata=y
 EOF
 # 取消默认插件
