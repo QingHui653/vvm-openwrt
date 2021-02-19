@@ -115,6 +115,7 @@ CONFIG_PACKAGE_luci-app-uugamebooster=n
 
 CONFIG_PACKAGE_luci-app-smartdns=y
 
+CONFIG_PACKAGE_luci-app-netdata=y
 EOF
 # 取消默认插件
 cat >> .config <<EOF

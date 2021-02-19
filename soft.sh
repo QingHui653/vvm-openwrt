@@ -44,6 +44,9 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 # svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 git clone https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
 
+# netdata
+rm -rf luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git
+
 # adguardhome  编译问题(https://github.com/rufengsuixing/luci-app-adguardhome/issues/83)
 # 暂时先进入 github release 下载 ipk安装
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
