@@ -27,6 +27,7 @@ env:
   CONFIG_FILE: .config
   SOFT_SH: soft.sh
   DIY_SH: diy.sh
+  OTHER_SH: other.sh
   CONFIG_SH: config-x86.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
@@ -108,7 +109,12 @@ jobs:
         pwd
         chmod +x $CONFIG_SH
         ./$CONFIG_SH
-          
+    
+    - name: 执行 other.sh
+      run: |
+        pwd
+        chmod +x $OTHER_SH
+        ./$OTHER_SH
 
     # 界面化配置,等待SSH连接 
     # - name: SSH connection to Actions
