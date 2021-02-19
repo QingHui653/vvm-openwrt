@@ -64,6 +64,9 @@ svn co https://github.com/firker/diy-ziyong/trunk/luci-app-koolproxyR
 #godproxy
 git clone https://github.com/godros/luci-app-godproxy.git 
 
+#dns广告过滤
+git clone https://github.com/garypang13/luci-app-dnsfilter.git
+
 # 文件管理 无法编译安装 进入github下载ipk手动安装
 #git clone https://github.com/lyin888/luci-app-filebrowser.git
 git clone https://github.com/MonwF/luci-app-filebrowser.git
