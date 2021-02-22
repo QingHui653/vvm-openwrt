@@ -101,7 +101,7 @@ CONFIG_PACKAGE_luci-app-koolproxyR=n
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-godproxy=y
-CONFIG_PACKAGE_luci-app-dnsfilter=y
+CONFIG_PACKAGE_luci-app-dnsfilter=n
 
 # 网易云
 CONFIG_PACKAGE_luci-app-unblockmusic=y
@@ -111,9 +111,9 @@ CONFIG_UnblockNeteaseMusic_NodeJS=y
 # vpn
 CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-app-openclash=y
-CONFIG_PACKAGE_luci-app-bypass=y
+CONFIG_PACKAGE_luci-app-bypass=n
 #CONFIG_PACKAGE_luci-app-vssr=n
-#CONFIG_PACKAGE_luci-app-vssr-plus=y
+#CONFIG_PACKAGE_luci-app-vssr-plus=n
 #CONFIG_PACKAGE_luci-app-passwall=n
 
 CONFIG_PACKAGE_luci-app-webadmin=y
@@ -122,8 +122,8 @@ CONFIG_PACKAGE_luci-app-wrtbwmon=y
 # 其他软件(京东签到,UU,smartdns,netdata)
 CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 CONFIG_PACKAGE_luci-app-uugamebooster=n
-CONFIG_PACKAGE_luci-app-smartdns=y
-CONFIG_PACKAGE_luci-app-netdata=y
+CONFIG_PACKAGE_luci-app-smartdns=n
+CONFIG_PACKAGE_luci-app-netdata=n
 EOF
 # 取消默认插件
 cat >> .config <<EOF
