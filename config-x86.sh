@@ -80,7 +80,7 @@ CONFIG_PACKAGE_ariang=n
 CONFIG_PACKAGE_luci-app-amule=y
 CONFIG_PACKAGE_luci-app-qbittorrent=y
 CONFIG_PACKAGE_luci-app-transmission=n
-CONFIG_PACKAGE_luci-app-baidupcs-web=n
+CONFIG_PACKAGE_luci-app-baidupcs-web=y
 
 # 内网穿透
 CONFIG_PACKAGE_luci-app-frpc=y
