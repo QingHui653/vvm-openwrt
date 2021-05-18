@@ -116,14 +116,19 @@ CONFIG_PACKAGE_luci-app-bypass=n
 #CONFIG_PACKAGE_luci-app-vssr-plus=n
 #CONFIG_PACKAGE_luci-app-passwall=n
 
-CONFIG_PACKAGE_luci-app-webadmin=y
-CONFIG_PACKAGE_luci-app-wrtbwmon=y
 
 # 其他软件(京东签到,UU,smartdns,netdata)
-CONFIG_PACKAGE_luci-app-jd-dailybonus=y
+CONFIG_PACKAGE_luci-app-jd-dailybonus=n
 CONFIG_PACKAGE_luci-app-uugamebooster=n
 CONFIG_PACKAGE_luci-app-smartdns=n
 CONFIG_PACKAGE_luci-app-netdata=n
+
+# 系统其它(网速控制)
+CONFIG_PACKAGE_luci-app-webadmin=y
+CONFIG_PACKAGE_luci-app-sqm=y
+CONFIG_PACKAGE_luci-app-syncdial=y
+CONFIG_PACKAGE_luci-app-ttyd=y
+CONFIG_PACKAGE_luci-app-wrtbwmon=n
 EOF
 # 取消默认插件
 cat >> .config <<EOF
