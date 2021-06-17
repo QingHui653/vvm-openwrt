@@ -14,10 +14,11 @@ git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
 #opentomato主题
 svn co https://github.com/solidus1983/luci-theme-opentomato/trunk/luci/themes/luci-theme-opentomato
 
-# passwall 
-git clone https://github.com/kenzok8/small.git
+# passwall  5.10编译先去掉
+#git clone https://github.com/kenzok8/small.git
+#svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
+
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall
-svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
 
 # SSR
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
@@ -27,9 +28,10 @@ svn co https://github.com/fw876/helloworld/trunk/tcping
 svn co https://github.com/fw876/helloworld/trunk/xray
 svn co https://github.com/fw876/helloworld/trunk/ipt2socks-alt
 
-#helloworld
-git clone https://github.com/jerrykuku/lua-maxminddb.git
-git clone https://github.com/jerrykuku/luci-app-vssr.git  
+#helloworld 5.10编译先去掉
+#git clone https://github.com/jerrykuku/lua-maxminddb.git
+#git clone https://github.com/jerrykuku/luci-app-vssr.git 
+ 
 # rm luci-app-vssr/root/etc/china_ssr.txt
 # rm luci-app-vssr/root/etc/config/black.txt
 # rm luci-app-vssr/root/etc/config/white.txt
@@ -39,8 +41,8 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
 # git clone https://github.com/Leo-Jo-My/my.git
 # git clone https://github.com/liuwenwv/luci-app-vssr-plus.git
 
-#bypass
-git clone https://github.com/garypang13/luci-app-bypass.git
+#bypass  5.10编译先去掉
+#git clone https://github.com/garypang13/luci-app-bypass.git
 
 # openclash
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
