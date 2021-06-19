@@ -109,7 +109,7 @@ CONFIG_UnblockNeteaseMusic_Go=n
 CONFIG_UnblockNeteaseMusic_NodeJS=y
 
 # vpn
-CONFIG_PACKAGE_luci-app-ssr-plus=n
+CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-bypass=n
 #CONFIG_PACKAGE_luci-app-vssr=n
