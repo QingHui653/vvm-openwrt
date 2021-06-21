@@ -24,9 +24,13 @@ svn co https://github.com/solidus1983/luci-theme-opentomato/trunk/luci/themes/lu
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
 svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn co https://github.com/fw876/helloworld/trunk/naiveproxy
+svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust
+svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev
 svn co https://github.com/fw876/helloworld/trunk/tcping
-svn co https://github.com/fw876/helloworld/trunk/xray
-svn co https://github.com/fw876/helloworld/trunk/ipt2socks-alt
+svn co https://github.com/fw876/helloworld/trunk/v2ray-core
+svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin
+svn co https://github.com/fw876/helloworld/trunk/xray-core
+svn co https://github.com/fw876/helloworld/trunk/xray-plugin
 
 #helloworld 5.10编译先去掉
 #git clone https://github.com/jerrykuku/lua-maxminddb.git
