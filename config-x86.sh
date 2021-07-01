@@ -101,7 +101,7 @@ CONFIG_PACKAGE_luci-app-koolproxyR=n
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-godproxy=y
-CONFIG_PACKAGE_luci-app-dnsfilter=n
+CONFIG_PACKAGE_luci-app-dnsfilter=y
 
 # 网易云
 CONFIG_PACKAGE_luci-app-unblockmusic=y
