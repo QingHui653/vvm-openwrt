@@ -121,7 +121,7 @@ CONFIG_PACKAGE_luci-app-bypass=n
 CONFIG_PACKAGE_luci-app-jd-dailybonus=n
 CONFIG_PACKAGE_luci-app-uugamebooster=n
 CONFIG_PACKAGE_luci-app-smartdns=n
-CONFIG_PACKAGE_luci-app-netdata=n
+CONFIG_PACKAGE_luci-app-netdata=y
 
 # 系统其它(网速控制)
 CONFIG_PACKAGE_luci-app-webadmin=y
