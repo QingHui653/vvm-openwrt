@@ -100,8 +100,8 @@ CONFIG_PACKAGE_luci-app-filebrowser=y
 CONFIG_PACKAGE_luci-app-koolproxyR=n
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
-CONFIG_PACKAGE_luci-app-godproxy=y
-CONFIG_PACKAGE_luci-app-dnsfilter=y
+CONFIG_PACKAGE_luci-app-godproxy=n
+CONFIG_PACKAGE_luci-app-dnsfilter=n
 
 # 网易云
 CONFIG_PACKAGE_luci-app-unblockmusic=y
@@ -121,7 +121,7 @@ CONFIG_PACKAGE_luci-app-bypass=n
 CONFIG_PACKAGE_luci-app-jd-dailybonus=n
 CONFIG_PACKAGE_luci-app-uugamebooster=n
 CONFIG_PACKAGE_luci-app-smartdns=n
-CONFIG_PACKAGE_luci-app-netdata=y
+CONFIG_PACKAGE_luci-app-netdata=n
 
 # 系统其它(网速控制)
 CONFIG_PACKAGE_luci-app-webadmin=y
