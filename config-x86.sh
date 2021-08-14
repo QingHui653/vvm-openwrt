@@ -119,7 +119,7 @@ CONFIG_PACKAGE_luci-app-bypass=n
 
 
 # 其他软件(京东签到,UU,smartdns,netdata)
-CONFIG_PACKAGE_luci-app-jd-dailybonus=n
+CONFIG_PACKAGE_luci-app-jd-dailybonus=y
 CONFIG_PACKAGE_luci-app-uugamebooster=n
 CONFIG_PACKAGE_luci-app-smartdns=n
 CONFIG_PACKAGE_luci-app-netdata=n
