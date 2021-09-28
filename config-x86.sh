@@ -92,6 +92,7 @@ CONFIG_PACKAGE_samba36-server=n
 
 CONFIG_PACKAGE_luci-app-cifsd=y
 CONFIG_PACKAGE_luci-app-nfs=y
+CONFIG_PACKAGE_luci-app-rclone=y
 
 # 文件管理
 CONFIG_PACKAGE_luci-app-filetransfer=y
