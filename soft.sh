@@ -26,7 +26,9 @@ svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
 svn co https://github.com/fw876/helloworld/trunk/naiveproxy
 svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust
 svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev
+svn co https://github.com/fw876/helloworld/trunk/simple-obfs
 svn co https://github.com/fw876/helloworld/trunk/tcping
+svn co https://github.com/fw876/helloworld/trunk/trojan
 svn co https://github.com/fw876/helloworld/trunk/v2ray-core
 svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin
 svn co https://github.com/fw876/helloworld/trunk/xray-core
