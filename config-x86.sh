@@ -91,7 +91,7 @@ CONFIG_PACKAGE_autosamba=n
 CONFIG_PACKAGE_luci-app-samba=n
 CONFIG_PACKAGE_samba36-server=n
 
-CONFIG_PACKAGE_luci-app-cifsd=n
+CONFIG_PACKAGE_luci-app-cifsd=y
 CONFIG_PACKAGE_luci-app-nfs=n
 CONFIG_PACKAGE_luci-app-rclone=n
 CONFIG_PACKAGE_luci-app-netspeedtest=n
