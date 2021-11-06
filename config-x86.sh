@@ -53,8 +53,8 @@ CONFIG_EFI_IMAGES=y
 EOF
 # IPv6支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_dnsmasq_full_dhcpv6=n
-CONFIG_PACKAGE_ipv6helper=n
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+CONFIG_PACKAGE_ipv6helper=y
 EOF
 # 多文件系统支持:
 cat >> .config <<EOF
@@ -91,10 +91,10 @@ CONFIG_PACKAGE_autosamba=n
 CONFIG_PACKAGE_luci-app-samba=n
 CONFIG_PACKAGE_samba36-server=n
 
-CONFIG_PACKAGE_luci-app-cifsd=y
-CONFIG_PACKAGE_luci-app-nfs=y
+CONFIG_PACKAGE_luci-app-cifsd=n
+CONFIG_PACKAGE_luci-app-nfs=n
 CONFIG_PACKAGE_luci-app-rclone=n
-CONFIG_PACKAGE_luci-app-netspeedtest=y
+CONFIG_PACKAGE_luci-app-netspeedtest=n
 
 
 # 文件管理
