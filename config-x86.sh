@@ -139,6 +139,7 @@ EOF
 # 取消默认插件
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-dockerman=n
+CONFIG_PACKAGE_luci-app-wireguard=n
 CONFIG_PACKAGE_luci-app-music-remote-center=n
 CONFIG_PACKAGE_luci-app-airplay2=n
 CONFIG_PACKAGE_luci-app-vsftpd=n
