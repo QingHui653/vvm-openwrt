@@ -53,8 +53,8 @@ CONFIG_EFI_IMAGES=y
 EOF
 # IPv6支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
-CONFIG_PACKAGE_ipv6helper=y
+CONFIG_PACKAGE_dnsmasq_full_dhcpv6=n
+CONFIG_PACKAGE_ipv6helper=n
 EOF
 # 多文件系统支持:
 cat >> .config <<EOF
@@ -80,7 +80,7 @@ CONFIG_PACKAGE_ariang=n
 CONFIG_PACKAGE_luci-app-amule=y
 CONFIG_PACKAGE_luci-app-qbittorrent=y
 CONFIG_PACKAGE_luci-app-transmission=n
-CONFIG_PACKAGE_luci-app-baidupcs-web=y
+CONFIG_PACKAGE_luci-app-baidupcs-web=n
 CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
 
 # 内网穿透
@@ -104,7 +104,8 @@ CONFIG_PACKAGE_luci-app-filebrowser=y
 # 广告过滤
 CONFIG_PACKAGE_luci-app-koolproxyR=n
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
-CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_luci-app-ikoolproxy=y
+CONFIG_PACKAGE_luci-app-adguardhome=n
 CONFIG_PACKAGE_luci-app-godproxy=n
 CONFIG_PACKAGE_luci-app-dnsfilter=n
 
@@ -123,10 +124,10 @@ CONFIG_PACKAGE_luci-app-bypass=n
 
 
 # 其他软件(京东签到,UU,smartdns,netdata)
-CONFIG_PACKAGE_luci-app-jd-dailybonus=y
+CONFIG_PACKAGE_luci-app-jd-dailybonus=n
 CONFIG_PACKAGE_luci-app-uugamebooster=n
 CONFIG_PACKAGE_luci-app-smartdns=n
-CONFIG_PACKAGE_luci-app-netdata=n
+CONFIG_PACKAGE_luci-app-netdata=y
 CONFIG_PACKAGE_luci-app-serverchan=y
 
 # 系统其它(网速控制)

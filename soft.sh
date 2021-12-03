@@ -70,7 +70,8 @@ svn co https://github.com/rufengsuixing/luci-app-adguardhome/branches/beta/
 svn co https://github.com/firker/diy-ziyong/trunk/luci-app-koolproxyR
 
 #godproxy
-git clone https://github.com/godros/luci-app-godproxy.git 
+# git clone https://github.com/godros/luci-app-godproxy.git 
+git clone https://github.com/iwrt/luci-app-ikoolproxy.git
 
 #dns广告过滤
 #git clone https://github.com/garypang13/luci-app-dnsfilter.git
