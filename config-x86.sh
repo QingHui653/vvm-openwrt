@@ -77,7 +77,7 @@ cat >> .config <<EOF
 # 下载软件 arir2,bt,pcs
 CONFIG_PACKAGE_luci-app-aria2=y
 CONFIG_PACKAGE_ariang=n
-CONFIG_PACKAGE_luci-app-amule=y
+CONFIG_PACKAGE_luci-app-amule=n
 CONFIG_PACKAGE_luci-app-qbittorrent=y
 CONFIG_PACKAGE_luci-app-transmission=n
 CONFIG_PACKAGE_luci-app-baidupcs-web=n
@@ -106,7 +106,6 @@ CONFIG_PACKAGE_luci-app-koolproxyR=n
 CONFIG_PACKAGE_luci-app-adbyby-plus=y
 CONFIG_PACKAGE_luci-app-ikoolproxy=y
 CONFIG_PACKAGE_luci-app-adguardhome=n
-CONFIG_PACKAGE_luci-app-godproxy=n
 CONFIG_PACKAGE_luci-app-dnsfilter=n
 
 # 网易云
@@ -127,15 +126,15 @@ CONFIG_PACKAGE_luci-app-bypass=n
 CONFIG_PACKAGE_luci-app-jd-dailybonus=n
 CONFIG_PACKAGE_luci-app-uugamebooster=n
 CONFIG_PACKAGE_luci-app-smartdns=n
-CONFIG_PACKAGE_luci-app-netdata=y
-CONFIG_PACKAGE_luci-app-serverchan=y
+CONFIG_PACKAGE_luci-app-netdata=n
+CONFIG_PACKAGE_luci-app-serverchan=n
 
 # 系统其它(网速控制)
 CONFIG_PACKAGE_luci-app-webadmin=y
 CONFIG_PACKAGE_luci-app-sqm=y
 CONFIG_PACKAGE_luci-app-syncdial=y
 CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-wrtbwmon=n
+CONFIG_PACKAGE_luci-app-wrtbwmon=y
 EOF
 # 取消默认插件
 cat >> .config <<EOF
