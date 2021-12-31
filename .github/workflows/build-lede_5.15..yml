@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build_5.10_OpenWrt
+name: Build_5.15_OpenWrt
 
 on:
   #release:
@@ -26,7 +26,7 @@ env:
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: .config
   SOFT_SH: soft.sh
-  DIY_SH: diy_5.10.sh
+  DIY_SH: diy_5.15.sh
   OTHER_SH: other.sh
   CONFIG_SH: config-x86.sh
   SSH_ACTIONS: true
