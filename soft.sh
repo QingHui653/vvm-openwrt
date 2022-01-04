@@ -31,6 +31,7 @@ svn co https://github.com/fw876/helloworld/trunk/tcping
 svn co https://github.com/fw876/helloworld/trunk/trojan
 svn co https://github.com/fw876/helloworld/trunk/v2ray-core
 svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin
+svn co https://github.com/fw876/helloworld/trunk/v2raya
 svn co https://github.com/fw876/helloworld/trunk/xray-core
 svn co https://github.com/fw876/helloworld/trunk/xray-plugin
 
