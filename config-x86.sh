@@ -66,18 +66,18 @@ CONFIG_PACKAGE_ipv6helper=n
 EOF
 # 多文件系统支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_kmod-fs-nfs=n
-CONFIG_PACKAGE_kmod-fs-nfs-common=n
-CONFIG_PACKAGE_kmod-fs-nfs-v3=n
-CONFIG_PACKAGE_kmod-fs-nfs-v4=n
-CONFIG_PACKAGE_kmod-fs-ntfs=n
-CONFIG_PACKAGE_kmod-fs-squashfs=n
+CONFIG_PACKAGE_kmod-fs-nfs=y
+CONFIG_PACKAGE_kmod-fs-nfs-common=y
+CONFIG_PACKAGE_kmod-fs-nfs-v3=y
+CONFIG_PACKAGE_kmod-fs-nfs-v4=y
+CONFIG_PACKAGE_kmod-fs-ntfs=y
+CONFIG_PACKAGE_kmod-fs-squashfs=y
 EOF
 # USB3.0支持:
 cat >> .config <<EOF
-CONFIG_PACKAGE_kmod-usb2=n
-CONFIG_PACKAGE_kmod-usb2-pci=n
-CONFIG_PACKAGE_kmod-usb3=n
+CONFIG_PACKAGE_kmod-usb2=y
+CONFIG_PACKAGE_kmod-usb2-pci=y
+CONFIG_PACKAGE_kmod-usb3=y
 EOF
 # 常用LuCI插件选择:
 cat >> .config <<EOF
