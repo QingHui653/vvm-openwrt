@@ -120,6 +120,7 @@ jobs:
     # - name: SSH connection to Actions
     #   uses: P3TERX/debugger-action@main
     #   if: env.SSH_ACTIONS == 'true'
+    #  make -j$(nproc) V=s
 
     - name: 下载 package
       id: package
@@ -135,7 +136,7 @@ jobs:
         pwd
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) V=s
+        make -1 V=s
         echo "::set-output name=status::success"
 
     - name: 上传 bin 目录
