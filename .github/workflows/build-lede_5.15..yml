@@ -136,7 +136,7 @@ jobs:
         pwd
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -1 V=s
+        make -j1 V=s
         echo "::set-output name=status::success"
 
     - name: 上传 bin 目录
