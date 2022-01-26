@@ -54,7 +54,7 @@ svn co https://github.com/fw876/helloworld/trunk/xray-plugin
 # openclash
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
 # svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
-git clone https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
+git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
 
 # netdata
 rm -rf luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git
