@@ -68,7 +68,9 @@ svn co https://github.com/rufengsuixing/luci-app-adguardhome/branches/beta/
 #KoolProxyR
 # git clone https://github.com/jefferymvp/luci-app-koolproxyR.git
 # git clone https://github.com/ycg31/luci-app-koolproxyR.git
-svn co https://github.com/firker/diy-ziyong/trunk/luci-app-koolproxyR
+
+##仓库不存在
+# svn co https://github.com/firker/diy-ziyong/trunk/luci-app-koolproxyR
 
 #godproxy
 # git clone https://github.com/godros/luci-app-godproxy.git 
@@ -79,7 +81,7 @@ git clone https://github.com/iwrt/luci-app-ikoolproxy.git
 
 # 文件管理 无法编译安装 进入github下载ipk手动安装
 #git clone https://github.com/lyin888/luci-app-filebrowser.git
-git clone https://github.com/MonwF/luci-app-filebrowser.git
+# git clone https://github.com/MonwF/luci-app-filebrowser.git
 
 # baidupcs-web 删库,等LEDE修复,先使用 此仓库
 # rm -rf baidupcs-web
@@ -90,8 +92,9 @@ git clone https://github.com/MonwF/luci-app-filebrowser.git
 # git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git
 
 # smartdns
-svn co https://github.com/firker/diy-ziyong/trunk/smartdns
-svn co https://github.com/firker/diy-ziyong/trunk/luci-app-smartdns
+##仓库不存在
+# svn co https://github.com/firker/diy-ziyong/trunk/smartdns
+# svn co https://github.com/firker/diy-ziyong/trunk/luci-app-smartdns
 
 #透明网桥
 # svn co https://github.com/kingyan/bridge/trunk/luci-app-bridge
