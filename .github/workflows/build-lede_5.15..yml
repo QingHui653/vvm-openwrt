@@ -192,7 +192,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       with:
         tag_name: ${{ env.date }}
-        release_name: 5.4_${{ env.date2 }} ${{ env.EMOJI }}
+        release_name: 5.15_${{ env.date2 }} ${{ env.EMOJI }}
         body: |
             墙内加速下载🔥:
             
