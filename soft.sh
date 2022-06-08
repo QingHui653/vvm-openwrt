@@ -107,3 +107,7 @@ git clone https://github.com/iwrt/luci-app-ikoolproxy.git
 # rm package/lean/luci-app-flowoffload -fr
 # rm package/lean/shortcut-fe/ -fr
 # rm package/lean/luci-app-sfe/ -fr
+
+
+# SSR
+echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
