@@ -1,5 +1,10 @@
 # 自定义软件
 echo "开始 github Soft 配置"
+# openwort 目录下 执行 添加feeds 
+
+# SSR
+echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
+
 pwd
 ls -l
 cd package/lean
@@ -107,7 +112,3 @@ git clone https://github.com/iwrt/luci-app-ikoolproxy.git
 # rm package/lean/luci-app-flowoffload -fr
 # rm package/lean/shortcut-fe/ -fr
 # rm package/lean/luci-app-sfe/ -fr
-
-
-# SSR
-echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
