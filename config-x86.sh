@@ -79,6 +79,7 @@ CONFIG_PACKAGE_kmod-usb2=y
 CONFIG_PACKAGE_kmod-usb2-pci=y
 CONFIG_PACKAGE_kmod-usb3=y
 CONFIG_PACKAGE_kmod-igb-intel=y
+CONFIG_PACKAGE_kmod-igb=n
 EOF
 # 常用LuCI插件选择:
 cat >> .config <<EOF
@@ -188,7 +189,7 @@ EOF
 cat >> .config <<EOF
 # CONFIG_TARGET_IMAGES_PAD is not set
 # CONFIG_VMDK_IMAGES is not set
-CONFIG_PACKAGE_kmod-igb is not set
+# CONFIG_PACKAGE_kmod-igb is not set
 EOF
 
 # Image Options 分区设置
