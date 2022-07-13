@@ -187,8 +187,8 @@ EOF
 cat >> .config <<EOF
 # CONFIG_TARGET_IMAGES_PAD is not set
 # CONFIG_VMDK_IMAGES is not set
-CONFIG_PACKAGE_kmod-igb-intel=y
-# CONFIG_PACKAGE_kmod-igb is not set
+CONFIG_PACKAGE_kmod-igb=y
+# CONFIG_PACKAGE_kmod-igb-intel is not set
 EOF
 
 # Image Options 分区设置
