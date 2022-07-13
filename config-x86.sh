@@ -78,6 +78,9 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_kmod-usb2=y
 CONFIG_PACKAGE_kmod-usb2-pci=y
 CONFIG_PACKAGE_kmod-usb3=y
+
+CONFIG_PACKAGE_kmod-igb=n
+CONFIG_PACKAGE_kmod-igb-intel=y
 EOF
 # 常用LuCI插件选择:
 cat >> .config <<EOF
