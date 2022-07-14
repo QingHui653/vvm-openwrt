@@ -41,7 +41,7 @@ touch ./.config
 cat >> .config <<EOF
 CONFIG_TARGET_x86=y
 CONFIG_TARGET_x86_64=y
-CONFIG_TARGET_x86_64_Generic=y
+CONFIG_TARGET_x86_64_DEVICE_generic=y
 EOF
 
 # 内核配置
@@ -50,7 +50,6 @@ EOF
 cat >> .config <<EOF
 CONFIG_TESTING_KERNEL=y
 CONFIG_HAS_TESTING_KERNEL=y
-CONFIG_LINUX_5_18=y
 EOF
 
 # 固件压缩:
