@@ -19,6 +19,23 @@ git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
 #opentomato主题
 svn co https://github.com/solidus1983/luci-theme-opentomato/trunk/luci/themes/luci-theme-opentomato
 
+
+# netdata
+rm -rf luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git
+
+# openclash
+# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
+# svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
+git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
+
+
+# adguardhome  编译问题(https://github.com/rufengsuixing/luci-app-adguardhome/issues/83)
+# 暂时先进入 github release 下载 ipk安装
+# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
+svn co https://github.com/rufengsuixing/luci-app-adguardhome/branches/beta/
+
+
 # passwall  5.10编译先去掉
 #git clone https://github.com/kenzok8/small.git
 #svn co https://github.com/xiaorouji/openwrt-passwall/trunk/luci-app-passwall
@@ -27,18 +44,19 @@ svn co https://github.com/solidus1983/luci-theme-opentomato/trunk/luci/themes/lu
 
 # SSR
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
-svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
-svn co https://github.com/fw876/helloworld/trunk/naiveproxy
-svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust
-svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev
-svn co https://github.com/fw876/helloworld/trunk/simple-obfs
-svn co https://github.com/fw876/helloworld/trunk/tcping
-svn co https://github.com/fw876/helloworld/trunk/trojan
-svn co https://github.com/fw876/helloworld/trunk/v2ray-core
-svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin
-svn co https://github.com/fw876/helloworld/trunk/v2raya
-svn co https://github.com/fw876/helloworld/trunk/xray-core
-svn co https://github.com/fw876/helloworld/trunk/xray-plugin
+# SSR源仓库
+# svn co https://github.com/fw876/helloworld/trunk/luci-app-ssr-plus
+# svn co https://github.com/fw876/helloworld/trunk/naiveproxy
+# svn co https://github.com/fw876/helloworld/trunk/shadowsocks-rust
+# svn co https://github.com/fw876/helloworld/trunk/shadowsocksr-libev
+# svn co https://github.com/fw876/helloworld/trunk/simple-obfs
+# svn co https://github.com/fw876/helloworld/trunk/tcping
+# svn co https://github.com/fw876/helloworld/trunk/trojan
+# svn co https://github.com/fw876/helloworld/trunk/v2ray-core
+# svn co https://github.com/fw876/helloworld/trunk/v2ray-plugin
+# svn co https://github.com/fw876/helloworld/trunk/v2raya
+# svn co https://github.com/fw876/helloworld/trunk/xray-core
+# svn co https://github.com/fw876/helloworld/trunk/xray-plugin
 
 #helloworld 5.10编译先去掉
 #git clone https://github.com/jerrykuku/lua-maxminddb.git
@@ -56,20 +74,6 @@ svn co https://github.com/fw876/helloworld/trunk/xray-plugin
 #bypass  5.10编译先去掉
 #git clone https://github.com/garypang13/luci-app-bypass.git
 
-# openclash
-# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-openclash
-# svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
-git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
-
-# netdata
-rm -rf luci-app-netdata && git clone https://github.com/sirpdboy/luci-app-netdata.git
-
-# adguardhome  编译问题(https://github.com/rufengsuixing/luci-app-adguardhome/issues/83)
-# 暂时先进入 github release 下载 ipk安装
-# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-adguardhome
-# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git
-svn co https://github.com/rufengsuixing/luci-app-adguardhome/branches/beta/
-
 #KoolProxyR
 # git clone https://github.com/jefferymvp/luci-app-koolproxyR.git
 # git clone https://github.com/ycg31/luci-app-koolproxyR.git
@@ -79,7 +83,7 @@ svn co https://github.com/rufengsuixing/luci-app-adguardhome/branches/beta/
 
 #godproxy
 # git clone https://github.com/godros/luci-app-godproxy.git 
-git clone https://github.com/iwrt/luci-app-ikoolproxy.git
+# git clone https://github.com/iwrt/luci-app-ikoolproxy.git
 
 #dns广告过滤
 #git clone https://github.com/garypang13/luci-app-dnsfilter.git
