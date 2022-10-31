@@ -125,8 +125,7 @@ CONFIG_UnblockNeteaseMusic_NodeJS=y
 CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-bypass=n
-#CONFIG_PACKAGE_luci-app-vssr=n
-#CONFIG_PACKAGE_luci-app-vssr-plus=n
+#CONFIG_PACKAGE_luci-app-vssr=y
 #CONFIG_PACKAGE_luci-app-passwall=n
 
 
@@ -182,6 +181,8 @@ CONFIG_PACKAGE_screen=y
 CONFIG_PACKAGE_tree=y
 CONFIG_PACKAGE_vim-fuller=y
 CONFIG_PACKAGE_wget=y
+CONFIG_PACKAGE_firewall=n
+CONFIG_PACKAGE_firewall4=y
 EOF
 # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
 cat >> .config <<EOF

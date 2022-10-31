@@ -5,6 +5,9 @@ echo "开始 github Soft 配置"
 # SSR
 echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
 
+# passwall
+echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall" >> "feeds.conf.default"
+
 pwd
 ls -l
 cd package/lean
@@ -59,20 +62,12 @@ svn co https://github.com/rufengsuixing/luci-app-adguardhome/branches/beta/
 # svn co https://github.com/fw876/helloworld/trunk/xray-plugin
 
 #helloworld 5.10编译先去掉
-#git clone https://github.com/jerrykuku/lua-maxminddb.git
-#git clone https://github.com/jerrykuku/luci-app-vssr.git 
+git clone https://github.com/jerrykuku/lua-maxminddb.git
+git clone https://github.com/jerrykuku/luci-app-vssr.git 
  
-# rm luci-app-vssr/root/etc/china_ssr.txt
-# rm luci-app-vssr/root/etc/config/black.txt
-# rm luci-app-vssr/root/etc/config/white.txt
-# rm luci-app-vssr/root/etc/dnsmasq.oversea/oversea_list.conf
-# rm luci-app-vssr/root/etc/dnsmasq.ssr/ad.conf
-# rm luci-app-vssr/root/etc/dnsmasq.ssr/gfw_base.conf
-# git clone https://github.com/Leo-Jo-My/my.git
-# git clone https://github.com/liuwenwv/luci-app-vssr-plus.git
 
 #bypass  5.10编译先去掉
-#git clone https://github.com/garypang13/luci-app-bypass.git
+svn co https://github.com/kiddin9/trunk/openwrt-bypass.git
 
 #KoolProxyR
 # git clone https://github.com/jefferymvp/luci-app-koolproxyR.git
