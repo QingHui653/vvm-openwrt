@@ -67,7 +67,7 @@ git clone https://github.com/jerrykuku/luci-app-vssr.git
  
 
 #bypass  5.10编译先去掉
-svn co https://github.com/kiddin9/trunk/openwrt-bypass
+svn co https://github.com/kiddin9/openwrt-bypass/trunk/luci-app-bypass
 
 #KoolProxyR
 # git clone https://github.com/jefferymvp/luci-app-koolproxyR.git
