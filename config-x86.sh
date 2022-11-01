@@ -107,7 +107,7 @@ CONFIG_PACKAGE_luci-app-netspeedtest=n
 
 # 文件管理
 CONFIG_PACKAGE_luci-app-filetransfer=y
-CONFIG_PACKAGE_luci-app-filebrowser=y
+CONFIG_PACKAGE_luci-app-filebrowser=n
 
 # 广告过滤
 CONFIG_PACKAGE_luci-app-koolproxyR=n
@@ -170,7 +170,7 @@ EOF
 # LuCI主题:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-atmaterial=y
-CONFIG_PACKAGE_luci-theme-argon=n
+CONFIG_PACKAGE_luci-theme-argon=y
 EOF
 # 常用软件包:
 cat >> .config <<EOF
@@ -181,8 +181,6 @@ CONFIG_PACKAGE_screen=y
 CONFIG_PACKAGE_tree=y
 CONFIG_PACKAGE_vim-fuller=y
 CONFIG_PACKAGE_wget=y
-CONFIG_PACKAGE_firewall=n
-CONFIG_PACKAGE_firewall4=y
 EOF
 # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
 cat >> .config <<EOF
