@@ -9,7 +9,10 @@ pwd
 ls -l
 
 #https://github.com/kenzok8/small-package常用仓库包
-git clone https://github.com/kenzok8/small-package
+# git clone https://github.com/kenzok8/small-package
+
+git clone https://github.com/kenzok8/openwrt-packages
+git clone https://github.com/kenzok8/small
 
 #atmaterial主题
 git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
