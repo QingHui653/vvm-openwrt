@@ -14,6 +14,19 @@ ls -l
 # git clone https://github.com/kenzok8/openwrt-packages
 
 git clone https://github.com/kenzok8/small
+#依赖
+svn co https://github.com/kenzok8/openwrt-packages/trunk/lua-neturl
+svn co https://github.com/kenzok8/openwrt-packages/trunk/gost
+svn co https://github.com/kenzok8/openwrt-packages/trunk/lua-maxminddb
+svn co https://github.com/kenzok8/openwrt-packages/trunk/microsocks
+svn co https://github.com/kenzok8/openwrt-packages/trunk/mosdns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/naiveproxy
+svn co https://github.com/kenzok8/openwrt-packages/trunk/redsocks2
+svn co https://github.com/kenzok8/openwrt-packages/trunk/sagernet-core
+svn co https://github.com/kenzok8/openwrt-packages/trunk/smartdns
+svn co https://github.com/kenzok8/openwrt-packages/trunk/taskd
+svn co https://github.com/kenzok8/openwrt-packages/trunk/tcping
+
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall2
 
