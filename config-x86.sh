@@ -126,7 +126,7 @@ CONFIG_PACKAGE_luci-app-ssr-plus=y
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-bypass=n
 #CONFIG_PACKAGE_luci-app-vssr=n
-#CONFIG_PACKAGE_luci-app-passwall2=y
+CONFIG_PACKAGE_luci-app-passwall2=y
 
 
 # 其他软件(京东签到,UU,smartdns,netdata)
