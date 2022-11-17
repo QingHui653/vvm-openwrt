@@ -215,7 +215,7 @@ jobs:
         github-token: ${{ secrets.REPO_TOKEN }}
         release-url: ${{ steps.create_release.outputs.upload_url }}
 
-      - name: 清理旧的workflow
+    - name: 清理旧的workflow
       uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 180
