@@ -57,7 +57,8 @@ CONFIG_TARGET_IMAGES_GZIP=y
 EOF
 # 编译UEFI固件:
 cat >> .config <<EOF
-CONFIG_EFI_IMAGES=y
+CONFIG_GRUB_IMAGES=y
+# CONFIG_EFI_IMAGES=y
 EOF
 # IPv6支持:
 cat >> .config <<EOF
