@@ -31,14 +31,18 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ssr-plus
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-passwall2
 
 svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-ikoolproxy
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-atmaterial_new
 
 # adguardhome
 svn co https://github.com/rufengsuixing/luci-app-adguardhome/branches/beta/
 
 #atmaterial主题
 git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-mcat
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-tomato
 
 # openclash
 # svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash
 git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
+
+#mosdns 
+git clone https://github.com/QiuSimons/openwrt-mos.git

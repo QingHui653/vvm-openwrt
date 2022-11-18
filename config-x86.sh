@@ -136,6 +136,7 @@ CONFIG_PACKAGE_luci-app-uugamebooster=n
 CONFIG_PACKAGE_luci-app-smartdns=n
 CONFIG_PACKAGE_luci-app-netdata=n
 CONFIG_PACKAGE_luci-app-serverchan=n
+CONFIG_PACKAGE_luci-app-mosdns=y
 
 # 系统其它(网速控制)
 CONFIG_PACKAGE_luci-app-webadmin=y
@@ -171,7 +172,8 @@ EOF
 # LuCI主题:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-theme-atmaterial=y
-CONFIG_PACKAGE_luci-theme-argon=y
+CONFIG_PACKAGE_luci-theme-opentomato=y
+CONFIG_PACKAGE_luci-theme-opentomcat=y
 EOF
 # 常用软件包:
 cat >> .config <<EOF
