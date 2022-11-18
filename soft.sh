@@ -45,4 +45,5 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-tomato
 git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
 
 #mosdns 
-git clone https://github.com/QiuSimons/openwrt-mos.git openwrt-mos
+# git clone https://github.com/QiuSimons/openwrt-mos.git openwrt-mos
+svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns openwrt-mos/luci-app-mosdns
