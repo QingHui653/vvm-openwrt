@@ -4,7 +4,7 @@ echo "开始 github Soft 配置"
 
 pwd
 ls -l
-cd package/lean
+cd package
 pwd
 ls -l
 
@@ -45,4 +45,4 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-tomato
 git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
 
 #mosdns 
-git clone https://github.com/QiuSimons/openwrt-mos.git
+git clone https://github.com/QiuSimons/openwrt-mos.git openwrt-mos

@@ -18,5 +18,6 @@ sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_gener
 sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=6.0/g' target/linux/x86/Makefile
 sed -i 's/KERNEL_PATCHVER:=5.15/KERNEL_PATCHVER:=6.0/g' target/linux/x86/Makefile
 
-curl -fsSL  https://raw.githubusercontent.com/firkerword/KPR/main/cus_config.yaml > package/openwrt-mos/luci-app-mosdns/root/etc/mosdns/cus_config.yaml
 curl -fsSL  https://raw.githubusercontent.com/firkerword/KPR/main/cus_config.yaml > ./package/openwrt-mos/luci-app-mosdns/root/etc/mosdns/cus_config.yaml
+cd package
+pwd
