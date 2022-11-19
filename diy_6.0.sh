@@ -9,7 +9,7 @@ pwd
 ls -l
 echo "开始 DIY 配置"
 pwd
-ls -l
+ls -ld
 
 # 修改默认ip
 sed -i 's/192.168.1.1/192.168.123.1/g' package/base-files/files/bin/config_generate
@@ -40,3 +40,9 @@ rm -rf .package/sirpdboy-package/luci-app-autotimeset
 # svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy feeds/packages/net/https-dns-proxy
 # rm -rf feeds/packages/lang/golang
 # svn export https://github.com/sbwml/packages_lang_golang/trunk feeds/packages/lang/golang
+
+
+
+cd feeds/packages/net
+pwd
+ls -l
