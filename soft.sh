@@ -47,5 +47,4 @@ git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/l
 #mosdns 
 # git clone https://github.com/QiuSimons/openwrt-mos.git openwrt-mos
 # svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns openwrt-mos/luci-app-mosdns
-
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-mosdns
+# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-mosdns

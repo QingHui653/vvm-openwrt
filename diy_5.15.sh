@@ -21,8 +21,7 @@ sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.15/g' target/linux/x86/Makefi
 #sed -i 's/KERNEL_PATCHVER:=5.10/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
 #sed -i 's/KERNEL_TESTING_PATCHVER:=5.10/KERNEL_TESTING_PATCHVER:=5.4/g' target/linux/x86/Makefile
 
-curl -fsSL  https://raw.githubusercontent.com/firkerword/KPR/main/cus_config.yaml > ./package/luci-app-mosdns/root/etc/mosdns/cus_config.yaml
-
-rm -rf ./feeds/packages/net/mosdns
-cp -r -f ./package/mosdns ./feeds/packages/net/mosdns
+# curl -fsSL  https://raw.githubusercontent.com/firkerword/KPR/main/cus_config.yaml > ./package/luci-app-mosdns/root/etc/mosdns/cus_config.yaml
+# rm -rf ./feeds/packages/net/mosdns
+# cp -r -f ./package/mosdns ./feeds/packages/net/mosdns
 
