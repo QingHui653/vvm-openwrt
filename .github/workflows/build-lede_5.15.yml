@@ -136,13 +136,13 @@ jobs:
       run: |
         pwd
         cd openwrt
-        ll 
+        ls -l 
         pwd
         pushd package/po2lmo
         make && sudo make install
         popd
         cd package
-        ll
+        ls -l
 
     - name: 编译固件
       id: compile
