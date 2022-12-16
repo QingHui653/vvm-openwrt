@@ -136,7 +136,11 @@ jobs:
       run: |
         pwd
         cd openwrt
-        pushd packages/po2lmo
+        ll 
+        pwd
+        cd package
+        ll
+        pushd package/po2lmo
         make && sudo make install
         popd
 
