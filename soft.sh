@@ -1,9 +1,6 @@
 # 自定义软件
 echo "开始 github Soft 配置"
 # openwort 目录下 执行 添加feeds 
-# alist 需要修改 golang分支
-rm -rf feeds/packages/lang/golang
-svn export https://github.com/sbwml/packages_lang_golang/branches/19.x feeds/packages/lang/golang
 
 pwd
 ls -l
