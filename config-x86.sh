@@ -103,7 +103,7 @@ CONFIG_PACKAGE_samba36-server=n
 
 CONFIG_PACKAGE_luci-app-cifsd=y
 CONFIG_PACKAGE_luci-app-nfs=n
-CONFIG_PACKAGE_luci-app-rclone=y
+CONFIG_PACKAGE_luci-app-rclone=n
 CONFIG_PACKAGE_luci-app-netspeedtest=n
 
 
@@ -139,11 +139,12 @@ CONFIG_PACKAGE_luci-app-netdata=n
 CONFIG_PACKAGE_luci-app-serverchan=n
 CONFIG_PACKAGE_luci-app-mosdns=y
 
-# 系统其它(网速控制)
+# 系统其它(网速控制)luci-app-nft-qos
+CONFIG_PACKAGE_luci-app-nft-qos=y
 CONFIG_PACKAGE_luci-app-webadmin=y
 CONFIG_PACKAGE_luci-app-sqm=y
 CONFIG_PACKAGE_luci-app-syncdial=y
-CONFIG_PACKAGE_luci-app-ttyd=y
+CONFIG_PACKAGE_luci-app-ttyd=n
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
 EOF
 # 取消默认插件
