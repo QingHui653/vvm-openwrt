@@ -231,11 +231,12 @@ jobs:
         release-url: ${{ steps.create_release.outputs.upload_url }}
 
     - name: 清理旧的workflow
-      uses: ActionsRML/delete-workflow-runs@main
+      uses: Mattraks/delete-workflow-runs@v2
       with:
         token: ${{ secrets.REPO_TOKEN }}
         repository: ${{ github.repository }}
         retain_days: 30
+        keep_minimum_runs: 6
 
     - name: 删除旧的Releases
       uses: dev-drprasad/delete-older-releases@v0.2.0
