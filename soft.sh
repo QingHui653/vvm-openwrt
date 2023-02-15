@@ -45,10 +45,8 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-tomato
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash/tools/po2lmo
 git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
 
-#mosdns 
-# git clone https://github.com/QiuSimons/openwrt-mos.git openwrt-mos
-# svn co https://github.com/QiuSimons/openwrt-mos/trunk/luci-app-mosdns openwrt-mos/luci-app-mosdns
-# svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-mosdns
+#mosdns v4 版本
+rm -rf mosdns && git clone https://github.com/IrineSistiana/mosdns/ -b v4
 
 #alist 各种网盘
 git clone https://github.com/sbwml/luci-app-alist
