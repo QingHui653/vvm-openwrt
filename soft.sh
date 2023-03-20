@@ -47,6 +47,7 @@ git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/l
 
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
+find / | grep luci-app-mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns -b v5-dev mosdns
 git clone https://github.com/sbwml/v2ray-geodata v2ray-geodata
 
