@@ -45,8 +45,13 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-theme-tomato
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash/tools/po2lmo
 git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
 
+find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
+find ./ | grep Makefile | grep mosdns | xargs rm -f
+git clone https://github.com/sbwml/luci-app-mosdns -b v5-dev mosdns
+git clone https://github.com/sbwml/v2ray-geodata v2ray-geodata
+
 #mosdns v4 版本
-rm -rf mosdns && git clone https://github.com/IrineSistiana/mosdns/ -b v4
+# rm -rf mosdns && git clone https://github.com/IrineSistiana/mosdns/ -b v4
 
 #alist 各种网盘
 git clone https://github.com/sbwml/luci-app-alist
