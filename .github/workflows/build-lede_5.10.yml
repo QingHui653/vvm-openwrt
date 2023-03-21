@@ -85,12 +85,12 @@ jobs:
     #   uses: P3TERX/debugger-action@main
     #   if: env.SSH_ACTIONS == 'true'
 
-    # - name: 执行 soft.sh
-    #   run: |
-    #     pwd
-    #     chmod +x $SOFT_SH
-    #     cd openwrt
-    #     ../$SOFT_SH
+    - name: 执行 soft.sh
+      run: |
+        pwd
+        chmod +x $SOFT_SH
+        cd openwrt
+        ../$SOFT_SH
 
     - name: 更新 feeds
       run: cd openwrt && ./scripts/feeds update -a
@@ -98,12 +98,12 @@ jobs:
     - name: 安装 feeds
       run: cd openwrt && ./scripts/feeds install -a
 
-    - name: 执行 soft.sh
-      run: |
-        pwd
-        chmod +x $SOFT_SH
-        cd openwrt
-        ../$SOFT_SH
+    # - name: 执行 soft.sh
+    #   run: |
+    #     pwd
+    #     chmod +x $SOFT_SH
+    #     cd openwrt
+    #     ../$SOFT_SH
 
     - name: 执行 diy.sh
       run: |
