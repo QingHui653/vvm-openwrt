@@ -157,8 +157,9 @@ CONFIG_PACKAGE_luci-app-vsftpd=n
 
 CONFIG_PACKAGE_luci-app-ddns=n
 CONFIG_PACKAGE_luci-app-xlnetacc=n
-CONFIG_PACKAGE_luci-app-wol=n
 CONFIG_PACKAGE_luci-app-accesscontrol=n
+# 网络唤醒
+CONFIG_PACKAGE_luci-app-wol=y
 
 # zerotier内网穿透,使用VPN
 CONFIG_PACKAGE_luci-app-zerotier=n
