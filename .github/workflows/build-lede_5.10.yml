@@ -193,7 +193,7 @@ jobs:
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
       run: |
         pwd
-        curl -fsSL git.io/file-transfer.sh | bash -s beta
+        curl -fsSL https://git.io/file-transfer | bash -s beta
         cowurl=$(./transfer cow --block 2621440 -s --no-progress ${FIRMWARE})
         cowurl=$(echo $cowurl | grep -o -E "https[^ ]*")
         echo "::set-env name=COWURL::$cowurl"
@@ -203,7 +203,7 @@ jobs:
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
       run: |
         pwd
-        curl -fsSL git.io/file-transfer.sh | bash -s beta
+        curl -fsSL https://git.io/file-transfer | bash -s beta
         wetrans=$(./transfer wet -s -p 16 --no-progress ${FIRMWARE})
         wetrans=$(echo $wetrans | grep -o -E "https[^ ]*")
         echo "::set-env name=WETRANS::$wetrans"
@@ -213,7 +213,7 @@ jobs:
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_WSS == 'true' && !cancelled()
       run: |
         pwd
-        curl -fsSL git.io/file-transfer.sh | bash -s beta
+        curl -fsSL https://git.io/file-transfer | bash -s beta
         wssurl=$(./transfer wss -s -p 16 --no-progress ${FIRMWARE})
         wssurl=$(echo $wssurl | grep -o -E "https[^ ]*")
         echo "::set-env name=WSSURL::$wssurl"
