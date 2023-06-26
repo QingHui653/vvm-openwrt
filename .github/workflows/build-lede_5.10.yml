@@ -33,7 +33,8 @@ env:
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
-  UPLOAD_WETRANSFER: true
+  UPLOAD_WETRANSFER: false
+  UPLOAD_WSS: true
   UPLOAD_FIRMWARE_FOR_RELEASE: false
   REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
   PPPOE_USERNAME: ${{ secrets.PPPOE_USERNAME }}
@@ -207,6 +208,16 @@ jobs:
         wetrans=$(echo $wetrans | grep -o -E "https[^ ]*")
         echo "::set-env name=WETRANS::$wetrans"
         echo "::warning file=wetransfer.com::$wetrans"
+
+    - name: 上传到文叔叔
+      if: steps.organize.outputs.status == 'success' && env.UPLOAD_WSS == 'true' && !cancelled()
+      run: |
+        pwd
+        curl -fsSL git.io/file-transfer.sh | bash -s beta
+        wssurl=$(./transfer wss -s -p 16 --no-progress ${FIRMWARE})
+        wssurl=$(echo $wssurl | grep -o -E "https[^ ]*")
+        echo "::set-env name=WSSURL::$wssurl"
+        echo "::warning file=wenshushu.cn::$wssurl"
 
     - name: 创建 release
       id: create_release
