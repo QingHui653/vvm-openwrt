@@ -20,5 +20,7 @@ find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-bypass/Makefile" | xargs -
 
 # alist 需要更改 golang分支(需要 golang 1.19.x 版本（在 ./scripts/feeds install -a 操作之后更换 golang 版本）)
 # https://github.com/sbwml/luci-app-alist/issues/30
-rm -rf feeds/packages/lang/golang
-git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
+
+# alist 编译没有足够空间,尝试不更新 golang
+# rm -rf feeds/packages/lang/golang
+# git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
