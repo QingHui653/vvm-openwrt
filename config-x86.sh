@@ -90,7 +90,7 @@ CONFIG_PACKAGE_luci-app-amule=n
 CONFIG_PACKAGE_luci-app-qbittorrent=y
 CONFIG_PACKAGE_luci-app-transmission=n
 CONFIG_PACKAGE_luci-app-baidupcs-web=n
-CONFIG_PACKAGE_luci-app-aliyundrive-webdav=y
+CONFIG_PACKAGE_luci-app-aliyundrive-webdav=n
 CONFIG_PACKAGE_luci-app-alist=y
 
 # 内网穿透
