@@ -15,7 +15,7 @@ pwd
 
 git clone https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash /home/runner/work/vvm-openwrt/vvm-openwrt/openwrt/package
 # openwrt-packages
-git clone https://github.com/kenzok8/openwrt-packages.git
+# git clone https://github.com/kenzok8/openwrt-packages.git
 
 #依赖
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/lua-neturl
