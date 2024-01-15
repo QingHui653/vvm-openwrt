@@ -13,9 +13,9 @@ pwd
 ## svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash/tools/po2lmo
 ## git clone -b dev https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash ./
 
-git clone -b https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash /home/runner/work/vvm-openwrt/vvm-openwrt/openwrt/package
+git clone https://github.com/vernesong/OpenClash.git && cp -r OpenClash/luci-app-openclash /home/runner/work/vvm-openwrt/vvm-openwrt/openwrt/package
 # openwrt-packages
-git clone -b https://github.com/kenzok8/openwrt-packages
+git clone https://github.com/kenzok8/openwrt-packages.git
 
 #依赖
 # svn co https://github.com/kenzok8/openwrt-packages/trunk/lua-neturl
