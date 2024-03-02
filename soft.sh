@@ -33,3 +33,8 @@ function merge_package(){
 }
 
 merge_package master https://github.com/WYC-2020/openwrt-packages luci-app-openclash
+
+
+cd package/openwrt-packages
+
+ls -l
