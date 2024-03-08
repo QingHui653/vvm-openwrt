@@ -146,6 +146,7 @@ CONFIG_PACKAGE_luci-app-sqm=y
 CONFIG_PACKAGE_luci-app-syncdial=y
 CONFIG_PACKAGE_luci-app-ttyd=n
 CONFIG_PACKAGE_luci-app-wrtbwmon=y
+CONFIG_PACKAGE_luci-app-eqos=y
 EOF
 # 取消默认插件
 cat >> .config <<EOF
