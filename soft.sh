@@ -16,6 +16,9 @@ git clone https://github.com/kenzok8/small
 git clone https://github.com/sbwml/luci-app-alist
 git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
 
+# eqosplus 网速控制更多功能 
+# https://github.com/sirpdboy/luci-app-eqosplus
+
 function merge_package(){
     # 参数1是分支名,参数2是库地址。所有文件下载到openwrt/package/openwrt-packages路径。
     # 同一个仓库下载多个文件夹直接在后面跟文件名或路径，空格分开。
