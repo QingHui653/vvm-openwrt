@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build_5.15_OpenWrt
+name: Build_istore_OpenWrt
 
 on:
   #release:
