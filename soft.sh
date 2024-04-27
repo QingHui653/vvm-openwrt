@@ -5,7 +5,8 @@ echo "开始 github Soft 配置"
 
 # 使用 https://github.com/stupidloud/nanopi-openwrt/blob/master/scripts/merge_packages.sh 重新下载
 
-echo "src-git istore https://github.com/linkease/istore;main" >> "feeds.conf.default"
+echo >> feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
 
 pwd
 ls -l
