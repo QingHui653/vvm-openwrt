@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build_6.0_OpenWrt
+name: Build_6.1_OpenWrt
 
 on:
   #release:
@@ -31,9 +31,10 @@ env:
   CONFIG_SH: config-x86.sh
   SSH_ACTIONS: true
   UPLOAD_BIN_DIR: false
-  UPLOAD_FIRMWARE: false
+  UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
+  UPLOAD_WSS: false
   UPLOAD_FIRMWARE_FOR_RELEASE: false
   REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
   PPPOE_USERNAME: ${{ secrets.PPPOE_USERNAME }}
@@ -43,6 +44,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # runs-on: ubuntu-20.04
     if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
@@ -64,8 +66,6 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         # alist需要
         sudo apt install libfuse-dev
-        
-        df -h
 
     - name: 设置环境变量
       id: date
@@ -98,6 +98,13 @@ jobs:
 
     - name: 安装 feeds
       run: cd openwrt && ./scripts/feeds install -a
+
+    # - name: 执行 soft.sh
+    #   run: |
+    #     pwd
+    #     chmod +x $SOFT_SH
+    #     cd openwrt
+    #     ../$SOFT_SH
 
     - name: 执行 diy.sh
       run: |
@@ -134,8 +141,20 @@ jobs:
       run: |
         pwd
         cd openwrt
-        make download -j16
+        make download -j8
         find ./dl/ -size -1024c -exec rm -f {} \;
+
+    # - name: 编译po2lmo
+    #   run: |
+    #     pwd
+    #     cd openwrt
+    #     ls -l 
+    #     pwd
+    #     pushd package/po2lmo
+    #     make && sudo make install
+    #     popd
+    #     cd package
+    #     ls -l
 
     - name: 编译固件
       id: compile
@@ -143,7 +162,8 @@ jobs:
         pwd
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j1 V=s
+        make -j1 V=s
+        echo "::set-output name=status::success"
 
     - name: 上传 bin 目录
       uses: actions/upload-artifact@main
@@ -173,22 +193,31 @@ jobs:
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
       run: |
         pwd
-        curl -fsSL git.io/file-transfer | sh
+        curl -fsSL https://git.io/file-transfer | bash -s beta
         cowurl=$(./transfer cow --block 2621440 -s --no-progress ${FIRMWARE})
         cowurl=$(echo $cowurl | grep -o -E "https[^ ]*")
         echo "::set-env name=COWURL::$cowurl"
         echo "::warning file=cowtransfer.com::$cowurl"
 
-    - name: 上传到WeTransfer
-      if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled()
+    - name: 上传到musetransfer.com
+      if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
       run: |
         pwd
-        df
-        curl -fsSL git.io/file-transfer | sh
-        wetrans=$(./transfer wet -s -p 16 --no-progress ${FIRMWARE})
-        wetrans=$(echo $wetrans | grep -o -E "https[^ ]*")
-        echo "::set-env name=WETRANS::$wetrans"
-        echo "::warning file=wetransfer.com::$wetrans"
+        curl -fsSL https://git.io/file-transfer | bash -s beta
+        wssurl=$(./transfer muse -s -p 16 --no-progress ${FIRMWARE})
+        cowurl=$(echo $cowurl | grep -o -E "https[^ ]*")
+        echo "::set-env name=COWURL::$cowurl"
+        echo "::warning file=musetransfer.com::$cowurl"
+
+    - name: 上传到文叔叔
+      if: steps.organize.outputs.status == 'success' && env.UPLOAD_WSS == 'true' && !cancelled()
+      run: |
+        pwd
+        curl -fsSL https://git.io/file-transfer | bash -s beta
+        wssurl=$(./transfer wss -s -p 16 --no-progress ${FIRMWARE})
+        wssurl=$(echo $wssurl | grep -o -E "https[^ ]*")
+        echo "::set-env name=WSSURL::$wssurl"
+        echo "::warning file=wenshushu.cn::$wssurl"
 
     - name: 创建 release
       id: create_release
@@ -199,7 +228,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
       with:
         tag_name: ${{ env.date }}
-        release_name: 6.0_${{ env.date2 }} ${{ env.EMOJI }}
+        release_name: 5.15_${{ env.date2 }} ${{ env.EMOJI }}
         body: |
             墙内加速下载🔥:
             
@@ -220,15 +249,13 @@ jobs:
         release-url: ${{ steps.create_release.outputs.upload_url }}
 
     - name: 清理旧的workflow
-      uses: Mattraks/delete-workflow-runs@v2
+      uses: GitRML/delete-workflow-runs@main
       with:
-        token: ${{ secrets.REPO_TOKEN }}
-        repository: ${{ github.repository }}
-        retain_days: 30
-        keep_minimum_runs: 6
+        retain_days: 180
+        keep_minimum_runs: 10
 
     - name: 删除旧的Releases
-      uses: dev-drprasad/delete-older-releases@v0.2.0
+      uses: dev-drprasad/delete-older-releases@v0.1.0
       with:
         keep_latest: 9
         delete_tags: true
