@@ -92,7 +92,7 @@ CONFIG_PACKAGE_luci-app-transmission=n
 CONFIG_PACKAGE_luci-app-baidupcs-web=n
 CONFIG_PACKAGE_luci-app-aliyundrive-webdav=n
 CONFIG_PACKAGE_luci-app-alist=y
-CONFIG_PACKAGE_luci-app-istore=y
+CONFIG_PACKAGE_luci-app-store=y
 
 # 内网穿透
 CONFIG_PACKAGE_luci-app-frpc=y
