@@ -16,7 +16,7 @@ ls -l
 
 
 git clone https://github.com/kenzok8/small
-git clone https://github.com/sbwml/luci-app-alist
+# git clone https://github.com/sbwml/luci-app-alist
 
 # theme
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
