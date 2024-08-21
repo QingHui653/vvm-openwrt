@@ -100,15 +100,16 @@ CONFIG_PACKAGE_luci-app-frpc=y
 # 比Samba3无优势
 CONFIG_PACKAGE_luci-app-samba4=n
 # 挂载远程共享
-CONFIG_PACKAGE_luci-app-cifs-mount=n
+# CONFIG_PACKAGE_luci-app-cifs-mount=n
 
 # 网络共享
 CONFIG_PACKAGE_autosamba=n
 CONFIG_PACKAGE_luci-app-samba=n
 CONFIG_PACKAGE_samba36-server=n
 
-CONFIG_PACKAGE_luci-app-cifsd=n
-CONFIG_PACKAGE_luci-app-ksmbd=y
+CONFIG_PACKAGE_luci-app-cifs=y
+CONFIG_PACKAGE_luci-app-cifs-mount=y
+CONFIG_PACKAGE_luci-app-ksmbd=n
 
 CONFIG_PACKAGE_luci-app-nfs=n
 CONFIG_PACKAGE_luci-app-rclone=y
