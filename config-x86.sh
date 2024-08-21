@@ -97,12 +97,19 @@ CONFIG_PACKAGE_luci-app-store=y
 # 内网穿透
 CONFIG_PACKAGE_luci-app-frpc=y
 
+# 比Samba3无优势
+CONFIG_PACKAGE_luci-app-samba4=n
+# 挂载远程共享
+CONFIG_PACKAGE_luci-app-cifs-mount=n
+
 # 网络共享
 CONFIG_PACKAGE_autosamba=n
 CONFIG_PACKAGE_luci-app-samba=n
 CONFIG_PACKAGE_samba36-server=n
 
-CONFIG_PACKAGE_luci-app-cifsd=y
+CONFIG_PACKAGE_luci-app-cifsd=n
+CONFIG_PACKAGE_luci-app-ksmbd=y
+
 CONFIG_PACKAGE_luci-app-nfs=n
 CONFIG_PACKAGE_luci-app-rclone=y
 CONFIG_PACKAGE_luci-app-netspeedtest=n
@@ -164,11 +171,6 @@ CONFIG_PACKAGE_luci-app-wol=y
 
 # zerotier内网穿透,使用VPN
 CONFIG_PACKAGE_luci-app-zerotier=n
-
-# 比Samba3无优势
-CONFIG_PACKAGE_luci-app-samba4=n
-# 挂载远程共享
-CONFIG_PACKAGE_luci-app-cifs-mount=n
 
 CONFIG_PACKAGE_luci-app-openvpn-server=n
 CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
