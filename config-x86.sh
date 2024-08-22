@@ -97,18 +97,24 @@ CONFIG_PACKAGE_luci-app-store=y
 # 内网穿透
 CONFIG_PACKAGE_luci-app-frpc=y
 
-# 比Samba3无优势
-CONFIG_PACKAGE_luci-app-samba4=n
+
 # 挂载远程共享
 # CONFIG_PACKAGE_luci-app-cifs-mount=n
 
+# 比Samba3无优势
+# CONFIG_PACKAGE_luci-app-samba4=y
+
 # 网络共享
-CONFIG_PACKAGE_autosamba=n
+CONFIG_PACKAGE_autosamba=y
+CONFIG_PACKAGE_luci-app-samba4=y
+CONFIG_PACKAGE_samba4-libs=y
+CONFIG_PACKAGE_samba4-server=y
+
 CONFIG_PACKAGE_luci-app-samba=n
 CONFIG_PACKAGE_samba36-server=n
 
-CONFIG_PACKAGE_luci-app-cifs=y
-CONFIG_PACKAGE_luci-app-cifs-mount=y
+CONFIG_PACKAGE_luci-app-cifs=n
+CONFIG_PACKAGE_luci-app-cifs-mount=n
 CONFIG_PACKAGE_luci-app-ksmbd=n
 
 CONFIG_PACKAGE_luci-app-nfs=n
