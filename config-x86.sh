@@ -135,10 +135,10 @@ CONFIG_PACKAGE_luci-app-dnsfilter=n
 
 # 网易云
 CONFIG_PACKAGE_luci-app-unblockmusic=y
-CONFIG_UnblockNeteaseMusic_Go=n
+# CONFIG_UnblockNeteaseMusic_Go=n
 # CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_Go=n
 # CONFIG_PACKAGE_luci-app-unblockmusic_INCLUDE_UnblockNeteaseMusic_NodeJS=y
-CONFIG_UnblockNeteaseMusic_NodeJS=y
+# CONFIG_UnblockNeteaseMusic_NodeJS=y
 
 # vpn
 CONFIG_PACKAGE_luci-app-ssr-plus=y
