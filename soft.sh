@@ -25,8 +25,6 @@ git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
 # eqosplus 网速控制更多功能 
 # https://github.com/sirpdboy/luci-app-eqosplus
 
-#music
-git clone https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git
 
 function merge_package(){
     # 参数1是分支名,参数2是库地址。所有文件下载到openwrt/package/openwrt-packages路径。

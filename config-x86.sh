@@ -113,8 +113,8 @@ CONFIG_PACKAGE_samba4-server=n
 CONFIG_PACKAGE_luci-app-samba=n
 CONFIG_PACKAGE_samba36-server=n
 
-CONFIG_PACKAGE_luci-app-cifs=y
-CONFIG_PACKAGE_luci-app-cifs-mount=y
+CONFIG_PACKAGE_luci-app-cifsd=y
+CONFIG_PACKAGE_luci-app-cifs-mount=n
 CONFIG_PACKAGE_luci-app-ksmbd=y
 
 CONFIG_PACKAGE_luci-app-nfs=n
