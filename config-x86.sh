@@ -186,7 +186,7 @@ CONFIG_PACKAGE_luci-app-ipsec-vpnd=n
 EOF
 # LuCI主题:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-theme-atmaterial=y
+CONFIG_PACKAGE_luci-theme-atmaterial=n
 CONFIG_PACKAGE_luci-theme-argon=y
 CONFIG_PACKAGE_luci-theme-opentomato=n
 CONFIG_PACKAGE_luci-theme-opentomcat=n
