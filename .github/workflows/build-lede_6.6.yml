@@ -202,7 +202,7 @@ jobs:
       if: steps.organize.outputs.status == 'success' && !cancelled()
       with:
         name: OpenWrt_firmware
-        path: openwrt/bin/packages/x86_64
+        path: ${{ env.FIRMWARE }}
 
     - name: 上传到奶牛快传
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_COWTRANSFER == 'true' && !cancelled()
