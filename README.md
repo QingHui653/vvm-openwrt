@@ -11,6 +11,7 @@
 7. [配置修改](https://zhuanlan.zhihu.com/p/94527343)
 8. [WSL编译](https://www.jmwww.net/file/14188.html) WSL位置: C:\Users\woshizbh\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc\LocalState\rootfs
 9. [WSL编译问题](https://p3terx.com/archives/compiling-openwrt-with-wsl.html) 
+10. [firkerword](https://github.com/firkerword/openwrt-Exclusive)
 
 ### 插件列表
 1. [常用插件](https://github.com/coolsnowwolf/lede/wiki/%E5%B8%B8%E7%94%A8%E6%8F%92%E4%BB%B6%E5%BA%94%E7%94%A8%E8%AF%B4%E6%98%8E)
