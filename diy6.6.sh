@@ -42,10 +42,10 @@ git clone https://github.com/sirpdboy/luci-app-parentcontrol.git package/luci-ap
 # git clone https://github.com/QiuSimons/openwrt-mos.git package/openwrt-mos
 # find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/openwrt-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
+# git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 # git clone -b luci-smartdns-new-version https://github.com/xiaorouji/openwrt-passwall.git package/passwall
 # git clone https://github.com/firkerword/luci-app-mosdns.git package/mosdns
-# git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
+git clone https://github.com/xiaorouji/openwrt-passwall2.git package/passwall2
 find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
 find ./ | grep Makefile | grep mosdns | xargs rm -f
 git clone https://github.com/sbwml/luci-app-mosdns -b v5-lua package/mosdns
