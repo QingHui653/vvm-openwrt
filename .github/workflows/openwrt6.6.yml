@@ -173,37 +173,4 @@ jobs:
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
         echo "url=$(cat wetransfer.log | grep https | cut -f3 -d" ")" >> $GITHUB_OUTPUT
     
-    - name: 发布至release
-      id: release
-      uses: ncipollo/release-action@v1
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-      with:
-        name: ${{ env.FILE_TIME }} 「 openwrt-6.6-X86-64 」
-        allowUpdates: true
-        tag: ${{ env.TAG_TIME }}
-        commit: main
-        token: ${{ secrets.RELEASE_TOKEN }}
-        body: |
-          功能介绍：含Docker、Passwall、MosDNS、lucky、定时设置等插件。
-          [固件源码](https://github.com/coolsnowwolf/lede)
-          由衷感谢所有为openwrt无私奉献的大佬们
-          📥 固件下载
-          🔗 [国外WT网盘](${{ steps.wetransfer.outputs.url }})
-        artifacts: ${{ env.FIRMWARE }}/*
-
-    - name: 清理旧的workflow
-      uses: Mattraks/delete-workflow-runs@v2
-      with:
-        token: ${{ secrets.RELEASE_TOKEN }}
-        retain_days: 180
-        keep_minimum_runs: 10
-
-    - name: 删除旧的Releases
-      uses: dev-drprasad/delete-older-releases@v0.3.2
-      if: env.UPLOAD_RELEASE == 'true' && !cancelled()
-      with:
-        keep_latest: 9
-        delete_tags: true
-      env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         
